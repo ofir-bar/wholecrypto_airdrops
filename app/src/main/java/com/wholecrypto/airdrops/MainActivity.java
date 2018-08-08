@@ -45,10 +45,8 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         setupUI();
         setupAuthentication();
-
         MobileAds.initialize(this, "ca-app-pub-3677276785158147~4334258306");
 
     }
@@ -124,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements
             break;
 
             case R.id.nav_publish_airdrop:
-                listItemIntent = new Intent(this,PublishAirdropActivity.class);
+                listItemIntent = new Intent(this,SalesPageActivity.class);
                 break;
 
             default:

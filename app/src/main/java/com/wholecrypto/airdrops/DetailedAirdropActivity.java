@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-public class AirdropActivity extends AppCompatActivity {
+public class DetailedAirdropActivity extends AppCompatActivity {
 
     public static final String EXTRA_COINNAME = "coinName";
     public static final String EXTRA_COINSYMBOL = "coinSymbol";
@@ -18,7 +18,7 @@ public class AirdropActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_airdrop);
+        setContentView(R.layout.activity_detailed_airdrop);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

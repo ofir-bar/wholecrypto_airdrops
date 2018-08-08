@@ -2,7 +2,6 @@
 package="com.wholecrypto.airdrops">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -19,13 +18,12 @@ package="com.wholecrypto.airdrops">
             </intent-filter>
         </activity>
         <activity
-            android:name=".AirdropActivity"
+            android:name=".DetailedAirdropActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FaqActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PublishAirdropActivity" />
-        <activity android:name=".newAirdropForm"/>
+        <activity android:name=".SalesPageActivity" />
     </application>
 
 </manifest>

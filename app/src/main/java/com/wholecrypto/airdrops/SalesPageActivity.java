@@ -1,6 +1,5 @@
 package com.wholecrypto.airdrops;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,12 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class PublishAirdropActivity extends AppCompatActivity {
+public class SalesPageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_publish_airdrop);
+        setContentView(R.layout.activity_sales_page);
 
         SectionsPagerAdapter pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         ViewPager pager = findViewById(R.id.publishAirdropViewPager);
@@ -31,8 +30,6 @@ public class PublishAirdropActivity extends AppCompatActivity {
         publishAirdropBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent submitAirdropForm = new Intent(PublishAirdropActivity.this, newAirdropForm.class);
-                startActivity(submitAirdropForm);
             }
         });
 
@@ -54,15 +51,15 @@ private class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position){
             switch (position){
                 case 0:
-                    return new PublishAirdropExposureFragment();
+                    return new SalesExposureFragment();
                 case 1:
-                    return new PublishAirdropTargetFragment();
+                    return new SalesTargetFragment();
                 case 2:
-                    return new PublishAirdropTrustFragment();
+                    return new SalesTrustFragment();
                 case 3:
-                    return new PublishAirdropPriceFragment();
+                    return new SalesPriceFragment();
                 case 4:
-                    return new PublishAirdropSupportFragment();
+                    return new SalesSupportFragment();
             }
             return null;
         }

@@ -13,7 +13,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,7 +41,7 @@ dependencies {
     //External Libraries
     implementation 'com.github.ybq:Android-SpinKit:1.1.0' // Custom Loading Animation
     implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.anjlab.android.iab.v3:library:1.0.44' // In-app purchases
+
 }
 
 apply plugin: 'com.google.gms.google-services'

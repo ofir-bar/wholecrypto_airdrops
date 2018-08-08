@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PublishAirdropSupportFragment extends Fragment {
+public class SalesPriceFragment extends Fragment {
 
 
-    public PublishAirdropSupportFragment() {
+    public SalesPriceFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class PublishAirdropSupportFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_publish_airdrop_support, container, false);
+        return inflater.inflate(R.layout.fragment_sales_price, container, false);
     }
 
 }
