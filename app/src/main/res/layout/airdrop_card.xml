@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardCornerRadius="4dp">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/coin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Coin Name"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coin_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Coin Symbol"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/coin_name" />
+
+
+    <TextView
+        android:id="@+id/airdrop_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Starting Date"
+        card_view:layout_constraintEnd_toStartOf="@+id/airdrop_end_date"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/airdrop_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Ending Date"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/airdrop_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Airdrop Description"
+        card_view:layout_constraintBottom_toTopOf="@+id/airdrop_reward"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/coin_symbol" />
+
+
+    <TextView
+        android:id="@+id/airdrop_reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Airdrop Reward"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/airdrop_reward_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/airdrop_reward_text"
+        card_view:layout_constraintEnd_toStartOf="@+id/airdrop_reward"
+        card_view:layout_constraintTop_toBottomOf="@+id/airdrop_description" />
+
+    <TextView
+        android:id="@+id/airdrop_startingdate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/airdrop_startingdate_text"
+        card_view:layout_constraintBottom_toTopOf="@+id/airdrop_start_date"
+        card_view:layout_constraintEnd_toEndOf="@+id/airdrop_start_date"
+        card_view:layout_constraintStart_toStartOf="@+id/airdrop_start_date"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/airdrop_endingdate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/airdrop_endingdate_text"
+        card_view:layout_constraintBottom_toTopOf="@+id/airdrop_end_date"
+        card_view:layout_constraintEnd_toEndOf="@+id/airdrop_end_date"
+        card_view:layout_constraintStart_toStartOf="@+id/airdrop_end_date" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.v7.widget.CardView>

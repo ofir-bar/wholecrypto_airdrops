@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_main"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/what_are_airdrops_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_airdrops_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/what_are_airdrops_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_airdrops_body"
+            style="@style/faqBody"
+            />
+
+
+
+        <TextView
+            android:id="@+id/join_airdrop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/join_airdrop_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/join_airdrop_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/join_airdrop_body"
+            style="@style/faqBody"
+            />
+
+
+        <TextView
+            android:id="@+id/tokens_purpose_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tokens_purpose_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/tokens_purpose_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tokens_purpose_body"
+            style="@style/faqBody"
+            />
+
+
+
+        <TextView
+            android:id="@+id/airdrop_reward_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/airdrop_reward_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/airdrop_reward_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/airdrop_reward_body"
+            style="@style/faqBody"
+            />
+
+
+
+        <TextView
+            android:id="@+id/airdrop_scams_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/airdrop_scams_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/airdrop_scams_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/airdrop_scams_body"
+            style="@style/faqBody"
+            />
+
+
+        <TextView
+            android:id="@+id/app_ads_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_ads_title"
+            style="@style/faqTitle"
+            />
+
+        <TextView
+            android:id="@+id/app_ads_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_ads_body"
+            style="@style/faqBody"
+            />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

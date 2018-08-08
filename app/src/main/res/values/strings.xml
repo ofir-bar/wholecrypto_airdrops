@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Airdrops (Beta)</string>
+    <string name="app_slogan">Free Crypto Tokens!</string>
+
+    <!--Action Menu -->
+    <string name="action_menu_faq">FAQ</string>
+    <!--Action Menu -->
+    <!--Navigation Menu Top -->
+    <string name="nav_list_airdrops">Airdrops</string>
+    <string name="nav_publish_airdrop">Publish Airdrop</string>
+
+    <!-- Required Strings for the navigation drawer. used for accessibility and add the hamburger icon -->
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+
+
+    <!--faq airdrops -->
+    <string name="faq_title">Airdrops FAQ</string>
+
+    <string name="what_are_airdrops_title">What are airdrops?</string>
+    <string name="what_are_airdrops_body">Airdrops are a distribution of cryptocurrencies for free. \n when a new token or coin comes out, developers
+    want to get attention for their project. therefore they distribute free cryptocurrencies if you help them get their name out there </string>
+
+    <string name="join_airdrop_title">I want to join an airdrop, what I need to do?</string>
+    <string name="join_airdrop_body">Each new cryptocurrency project have their own airdrop requirements. some may require you to only join a telegram group,\n
+    others may require you to like them on social media or fill an online form, etc.</string>
+
+    <string name="tokens_purpose_title">What can I do with tokens?</string>
+    <string name="tokens_purpose_body">Your tokens worth money. you can either sell them immediately upon recieveing them,\n
+    or you can wait until the tokens value will raise and sell them at a higher price.</string>
+
+    <string name="airdrop_reward_title">How much tokens do I get?</string>
+    <string name="airdrop_reward_body">Each airdrop will give you different amount of tokens. what is important is not the amount of tokens you get,\n
+    but the total value of the tokens, so you get as much money as possible.</string>
+
+    <string name="airdrop_scams_title">Can I register to an airdrop and not get my tokens?</string>
+    <string name="airdrop_scams_body">It is possible that you would fill the airdrop requirements and not get your tokens.\n
+    however, all airdrops listed in this app are going through a verification process. our team is working hard to ensure all airdrops delivering their promises.\n
+        However, we can't guarantee 100% legit airdrops. To fight airdrop scammers, you can report on airdrops.</string>
+
+    <string name="app_ads_title">I hate ads! how can I disable them in this app?</string>
+    <string name="app_ads_body">We offer free ad removal for 7 days if you invite your friends to our app. you can do it simply by clicking \n
+    the block icon in top-right and inviting your friends. </string>
+
+
+    <!--faq airdrops -->
+
+    <!-- Publish Airdrop Forms -->
+    <string name="publish_airdrop_title">Publish New Airdrop</string>
+    <string name="coin_name">Coin Name(e.g. Bitcoin)</string>
+    <string name="coin_symbol">Coin Symbol(e.g. BTC)</string>
+    <string name="airdrop_starting_date">Starting Date</string>
+    <string name="airdrop_ending_date">Ending Date</string>
+    <string name="airdrop_description_title">Airdrop Description</string>
+    <string name="airdrop_description_hint">Join telegram, submit your code and complete an online form. Join here: "https://www.thisisasamplelink55.com"</string>
+    <string name="airdrop_reward">Reward(e.g. 0.5 BTC)</string>
+    <!-- Publish Airdrop Forms -->
+
+    <!--airdrop_card.xml -->
+    <string name="airdrop_reward_text">Reward:</string>
+    <string name="airdrop_startingdate_text">Start</string>
+    <string name="airdrop_endingdate_text">End</string>
+    <!--airdrop_card.xml -->
+
+
+    <!--Main menu items -->
+    <string name="options">options</string>
+    <string name="sign_out">Sign out</string>
+
+    <!-- -->
+    <string name="exposure_fragment_title">Exposure</string>
+    <string name="exposure_fragment_body">Reach out to thousands of <b>global</b> users</string>
+    <string name="exposure_fragment_bottom">With a <b>fraction</b> of marketing budget</string>
+
+    <string name="target_fragment_title">Target</string>
+    <string name="target_fragment_body">Target users who are <b>interested</b> in cryptocurrencies projects</string>
+    <string name="target_fragment_bottom">Our users are <b>validated</b> through phone-authentication</string>
+
+    <string name="trust_fragment_title">Trust</string>
+    <string name="trust_fragment_body">We only publish projects that passed inspection</string>
+    <string name="trust_fragment_bottom">Users will identify your project as a <b>trusty</b></string>
+
+    <string name="price_fragment_title">Price</string>
+    <string name="price_fragment_body">Investing in a top ICO platform will payback your efforts in fundraising</string>
+
+    <string name="support_fragment_title">Support</string>
+    <string name="support_fragment_body">Full customer service support 24/7</string>
+    <string name="support_fragment_bottom">To ensure your satisfaction</string>
+
+
+    <string name="list_your_airdrop">List your airdrop</string>
+    <string name="title_activity_new_airdrop_form">newAirdropForm</string>
+
+
+    <string name="full_name_text">Full Name</string>
+    <string name="email_text">Email</string>
+    <string name="website_text">Website</string>
+    <string name="start_date_text">Start Date</string>
+    <string name="end_date_text">End Date</string>
+    <string name="signup_button_next">NEXT</string>
+    <string name="contact_note">we might contact you if more details required</string>
+
+
+    <string name="token_amount">Token amount</string>
+    <string name="token_price">Token price</string>
+    <string name="send_airdrop">Send Airdrop!</string>
+    <string name="publish_note">Airdrop will be sent for inspection</string>
+
+</resources>

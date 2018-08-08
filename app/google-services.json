@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "400107703705",
+    "firebase_url": "https://wholecrypto-airdrops.firebaseio.com",
+    "project_id": "wholecrypto-airdrops",
+    "storage_bucket": "wholecrypto-airdrops.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400107703705:android:87a3cb2bde2cc845",
+        "android_client_info": {
+          "package_name": "com.wholecrypto.airdrops"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400107703705-lk0npdhp395cvn2k4q2bichno8pgm6t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wholecrypto.airdrops",
+            "certificate_hash": "97d1f302fcae3aacd044330f11c3a924a5bae47d"
+          }
+        },
+        {
+          "client_id": "400107703705-ii7lommunefr3uc8kr14te33mdj8ksf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPz5swBuDWs1ZstmOGZPV3qeTPc9cRcKQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400107703705-ii7lommunefr3uc8kr14te33mdj8ksf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
