@@ -23,7 +23,7 @@ package="com.wholecrypto.airdrops">
         <activity
             android:name=".FaqActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".SalesPageActivity" />
+        <activity android:name=".SalesMainPageActivity" />
     </application>
 
 </manifest>

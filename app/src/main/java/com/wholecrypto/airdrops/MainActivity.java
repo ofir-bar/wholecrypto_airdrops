@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     public static final int RC_SIGN_IN = 1;
-    private boolean userSignedIn = false;
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private List<Fragment> activeFragments = new ArrayList<>();
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements
             break;
 
             case R.id.nav_publish_airdrop:
-                listItemIntent = new Intent(this,SalesPageActivity.class);
+                listItemIntent = new Intent(this,SalesMainPageActivity.class);
                 break;
 
             default:
@@ -184,7 +183,6 @@ public class MainActivity extends AppCompatActivity implements
         super.onActivityResult(requestCode,resultCode,data);
         if (requestCode == RC_SIGN_IN){
             if (resultCode == RESULT_OK){
-                userSignedIn = true;
                 Log.e(TAG,"onActivityResult: RESULT_OK");
             }
             else if (resultCode == RESULT_CANCELED){
