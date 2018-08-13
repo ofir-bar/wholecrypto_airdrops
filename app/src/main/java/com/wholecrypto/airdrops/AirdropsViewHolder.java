@@ -14,9 +14,8 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
         view=itemView;
     }
 
-    public void setAirdropData(Airdrop airdrop)
-    {
-
+    public void setAirdropData(Airdrop airdrop) {
+/*
         // initialise card views items and set value in them
         TextView coinName = view.findViewById(R.id.coin_name);
         coinName.setText(airdrop.getCoinName());
@@ -32,7 +31,8 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
 
         TextView airdropDescription = view.findViewById(R.id.airdrop_description);
         airdropDescription.setText(airdrop.getAirdropDescription());
-
+*/
     }
+
 
     }

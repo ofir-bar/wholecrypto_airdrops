@@ -91,4 +91,33 @@
     <string name="list_your_airdrop">List Your Airdrop</string>
 
 
+
+    <!-- Register new airdrop -->
+
+    <string name="new_form_header">If you don\'t know some form, leave it blank</string>
+    <string name="is_premium">Premium Airdrop?</string>
+    <string name="ico_name">ICO Project name:</string>
+
+    <string name="website_url">Website URL:</string>
+    <string name="social_media_url">Social Media URLs:</string>
+    <string name="white_paper_url">White Paper URL:</string>
+    <string name="bounty_url">Bounty URL:</string>
+    <string name="airdrop_form_url">Airdrop Form URL:</string>
+    <string name="country_of_operation">Country of Operation</string>
+    <string name="project_category">Project Category:</string>
+    <string name="airdrop_dates">Airdrop Dates:</string>
+    <string name="token_symbol">Token Symbol</string>
+    <string name="project_platform">Platform or Token Type (e.g. Ethereum, ERC20)</string>
+    <string name="token_amount">Tokens Distributed (e.g. 50 NEW) </string>
+    <string name="price_per_token">Price per token (e.g. 1 NEW = 0.001 ETH)  </string>
+    <string name="kyc_or_whitelist">KYC or Whitelist?</string>
+    <string name="restrictions">Any restrictions in who can participate?</string>
+    <string name="about">About your project, and what need to join the airdrop</string>
+
+
+
+
+
+
+
 </resources>

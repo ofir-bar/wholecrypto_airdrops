@@ -16,12 +16,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -47,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements
         setupUI();
         setupAuthentication();
         MobileAds.initialize(this, "ca-app-pub-3677276785158147~4334258306");
-
     }
 
 
@@ -247,8 +244,7 @@ public class MainActivity extends AppCompatActivity implements
                                     .setPrivacyPolicyUrl("https://superapp.example.com/privacy-policy.html")
                                     .setIsSmartLockEnabled(false)
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.PhoneBuilder().build(),
-                                            new AuthUI.IdpConfig.GoogleBuilder().build()))
+                                            new AuthUI.IdpConfig.PhoneBuilder().build()))
                                     .build(),
                             RC_SIGN_IN);
                 }

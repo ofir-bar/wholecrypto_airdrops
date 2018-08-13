@@ -28,16 +28,11 @@ public class SalesMainPageActivity extends AppCompatActivity {
 
         Button publishAirdropBtn = findViewById(R.id.publish_airdrop_button);
 
-        final Intent contactIntent = new Intent(Intent.ACTION_SEND);
-        contactIntent.setType("message/rfc822");
-        contactIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"contact@wholecrypto.com"});
-        contactIntent.putExtra(Intent.EXTRA_SUBJECT, "List new airdrop");
-        contactIntent.putExtra(Intent.EXTRA_TEXT   , "Hi, I am a marketing agency/ICO project. I would like to list my project in your app!");
-
         publishAirdropBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(contactIntent);
+                Intent intent = new Intent(SalesMainPageActivity.this, newAirdropForm.class);
+                startActivity(intent);
             }
         });
 

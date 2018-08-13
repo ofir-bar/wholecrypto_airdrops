@@ -46,14 +46,14 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), DetailedAirdropActivity.class);
 
-
+/*
                 //Gathers all details from the tapped airdrop and pass it to the airdrop-in detail activity
                 intent.putExtra(DetailedAirdropActivity.EXTRA_COINNAME, airdrop.getCoinSymbol());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_COINSYMBOL, airdrop.getCoinSymbol());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_STARTING_DATE, airdrop.getAirdropStartingDate());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_ENDING_DATE, airdrop.getAirdropEndingDate());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_DESCRIPTION, airdrop.getAirdropDescription());
-
+*/
                 //Start Activity with details on a specific airdrop
                 v.getContext().startActivity(intent);
 

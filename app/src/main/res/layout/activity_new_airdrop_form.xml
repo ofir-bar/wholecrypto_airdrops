@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newAirdropForm"
+    android:background="@drawable/publish_airdrop_gradient_background">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_form_header" />
+    <!-- Header -->
+
+
+
+    <!-- ICO Project name ? -->
+    <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/icoProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ico_name" />
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/icoProjectNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+    <!-- ICO Project name ? -->
+
+
+    <!-- Project Category -->
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_edittext">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/project_category" />
+
+        <Spinner
+            android:layout_marginStart="16dp"
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <!-- Project Category -->
+
+
+    <!-- Website URL -->
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/websiteURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/website_url"/>
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/websiteURLText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri" />
+    <!-- Website URL -->
+
+
+    <!-- Social Media URLs -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/socialMediaURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/social_media_url" />
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/socialMediaURLText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri"/>
+
+    <!-- Social Media URLs -->
+
+
+    <!-- White Paper URL -->
+    <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/whitepaperURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/white_paper_url"/>
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/whitepaperURLText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri"/>
+    <!-- White Paper URL -->
+
+
+    <!-- Bounty URL -->
+    <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:id="@+id/bountyURLText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bounty_url"/>
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/bountyURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri"/>
+    <!-- Bounty URL -->
+
+
+    <!-- Airdrop Form URL -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/airdropFormURLText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/airdrop_form_url"/>
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:layout_gravity="center"
+            android:id="@+id/airdropFormURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri"/>
+    <!-- Airdrop Form URL -->
+
+
+    <!-- Airdrop Dates -->
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:id="@+id/airdropDatesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/airdrop_dates"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <EditText
+            android:background="@drawable/rounded_edittext"
+            android:id="@+id/startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:hint="@string/airdrop_starting_date"
+            android:textSize="14sp"/>
+
+
+
+        <EditText
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:id="@+id/endDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:hint="@string/airdrop_ending_date"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <!-- Airdrop Dates -->
+
+    <!-- Token Symbol -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/tokenSymbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/token_symbol"/>
+
+    <EditText
+        android:background="@drawable/rounded_edittext"
+        android:layout_gravity="center"
+        android:id="@+id/tokenSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textUri"/>
+    <!-- Token Symbol -->
+
+
+
+    <!-- Platform Type -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/projectPlatformText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/project_platform"/>
+
+    <EditText
+        android:background="@drawable/rounded_edittext"
+        android:layout_gravity="center"
+        android:id="@+id/projectPlatform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"/>
+    <!-- Platform Type -->
+
+
+
+
+
+    <!-- Token distributed -->
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/tokenAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/token_amount"/>
+
+        <EditText
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:id="@+id/tokenAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+    <!-- Token distributed -->
+
+
+
+
+    <!-- Price Per Token -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/pricePerTokenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_per_token"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edittext"
+        android:id="@+id/pricePerToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        />
+    <!-- Price Per Token -->
+
+
+    <!-- KYC or Whitelist? -->
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edittext">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kyc_or_whitelist"
+            android:id="@+id/kycOrWhitelistText"/>
+
+        <Spinner
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:id="@+id/kycOrWhitelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- KYC or Whitelist? -->
+
+
+    <!-- Restrictions -->
+        <TextView
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/restrictionsText"
+            android:text="@string/restrictions"/>
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/restrictions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"/>
+    <!-- Restrictions -->
+
+
+    <!-- About -->
+    <EditText
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_gravity="center"
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+    <!-- About -->
+
+
+    <!-- is Premium ? -->
+    <Switch
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/isPremiumSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_premium"/>
+    <!-- is Premium ? -->
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I accept the Terms of Service" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Send"/>
+
+
+
+
+</LinearLayout>
+
+</ScrollView>
