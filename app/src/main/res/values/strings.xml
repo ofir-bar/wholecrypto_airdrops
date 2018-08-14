@@ -114,8 +114,47 @@
     <string name="restrictions">Any restrictions in who can participate?</string>
     <string name="about">About your project, and what need to join the airdrop</string>
 
+    <string-array name="project_category">
 
+        <item> Finance </item>
+        <item>Payments/Wallets</item>
+        <item>Commerce/Retail</item>
+        <item>Asset Management</item>
+        <item>Blockchain Platform</item>
+        <item>Data/Computing/AI</item>
+        <item>Gaming/AR/VR</item>
+        <item>Betting/Gambling</item>
+        <item>Media/Content</item>
+        <item>Prediction Market</item>
+        <item>Entertainment</item>
+        <item>IoT</item>
+        <item>Drugs/Health</item>
+        <item>Security/Identity</item>
+        <item>Funding/VC</item>
+        <item>Content/Advertising</item>
+        <item>Jobs/Marketplace</item>
+        <item>Real Estate</item>
+        <item>Network/Communications</item>
+        <item>Industry/Logistics</item>
+        <item>Social Network</item>
+        <item>Transportation</item>
+        <item>Energy/Utilities</item>
+        <item>Crypto Mining</item>
+        <item>Education</item>
+        <item>Insurance</item>
+        <item>Management Systems</item>
+        <item>Travel</item>
+        <item>Music/Arts</item>
+        <item>Sports</item>
 
+    </string-array>
+
+    <string-array name="kyc_or_whitelist">
+        <item>None</item>
+        <item>KYC and Whitelist</item>
+        <item>KYC only</item>
+        <item>Whitelist only</item>
+    </string-array>
 
 
 
