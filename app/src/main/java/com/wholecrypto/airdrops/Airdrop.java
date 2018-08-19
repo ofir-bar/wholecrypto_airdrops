@@ -3,140 +3,130 @@ import android.support.annotation.Keep;
 
 @Keep
 public class Airdrop {
-    private boolean isPremium;
-    private String icoName;
-    private String category;
+
+    private String projectName;
+    private String projectCategory;
     private String websiteURL;
-    private String about;
     private String socialMediaURL;
-    private String airdropFormLink;
-    private String airdropImage;
-    private double airdropAmount;
-    private String countryOfOperation;
-    private setDate icoStartDate;
-    private setDate icoEndDate;
-    private String whitepaperURL;
+    private String whitePaperURL;
     private String bountyURL;
-    private String tokenTicker;
-    private String platformAndTokenType;
-    private double tokenPrice;
+    private String airdropFormURL;
+    private String startDate;
+    private String endDate;
+    private String tokenSymbol;
+    private String platform;
+    private String tokensDistribute;
+    private String pricePerToken;
+    private String kycOrWhitelist;
     private String restrictions;
-    private String contactEmail;
+    private String about;
+    private boolean isPremium;
+    private boolean isTermsApproved;
+    private String sentBy;
     private boolean approvedAirdrop;
-    private String sentByPhone;
-    private String check;
+
+    public Airdrop(String projectName, String projectCategory, String websiteURL, String socialMediaURL, String whitePaperURL, String bountyURL, String airdropFormURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, boolean isTermsApproved, String sentBy, boolean approvedAirdrop) {
+        this.projectName = projectName;
+        this.projectCategory = projectCategory;
+        this.websiteURL = websiteURL;
+        this.socialMediaURL = socialMediaURL;
+        this.whitePaperURL = whitePaperURL;
+        this.bountyURL = bountyURL;
+        this.airdropFormURL = airdropFormURL;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.tokenSymbol = tokenSymbol;
+        this.platform = platform;
+        this.tokensDistribute = tokensDistribute;
+        this.pricePerToken = pricePerToken;
+        this.kycOrWhitelist = kycOrWhitelist;
+        this.restrictions = restrictions;
+        this.about = about;
+        this.isPremium = isPremium;
+        this.isTermsApproved = isTermsApproved;
+        this.sentBy = sentBy;
+        this.approvedAirdrop = approvedAirdrop;
+    }
 
     public Airdrop(){}  //Required for firebase
 
-    public Airdrop(String check){
-        this.check = check;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public Airdrop(boolean isPremium, String icoName, String category, String websiteURL, String about, String socialMediaURL, String airdropFormLink, String airdropImage, double airdropAmount, String countryOfOperation, setDate icoStartDate, setDate icoEndDate, String whitepaperURL, String bountyURL, String tokenTicker, String platformAndTokenType, double tokenPrice, String restrictions, String contactEmail, boolean approvedAirdrop, String sentByPhone) {
-        this.isPremium = isPremium;
-        this.icoName = icoName;
-        this.category = category;
-        this.websiteURL = websiteURL;
-        this.about = about;
-        this.socialMediaURL = socialMediaURL;
-        this.airdropFormLink = airdropFormLink;
-        this.airdropImage = airdropImage;
-        this.airdropAmount = airdropAmount;
-        this.countryOfOperation = countryOfOperation;
-        this.icoStartDate = icoStartDate;
-        this.icoEndDate = icoEndDate;
-        this.whitepaperURL = whitepaperURL;
-        this.bountyURL = bountyURL;
-        this.tokenTicker = tokenTicker;
-        this.platformAndTokenType = platformAndTokenType;
-        this.tokenPrice = tokenPrice;
-        this.restrictions = restrictions;
-        this.contactEmail = contactEmail;
-        this.approvedAirdrop = approvedAirdrop;
-        this.sentByPhone = sentByPhone;
-    }
-
-    public boolean isPremium() {
-        return isPremium;
-    }
-
-    public String getIcoName() {
-        return icoName;
-    }
-
-    public String getCategory() {
-        return category;
+    public String getProjectCategory() {
+        return projectCategory;
     }
 
     public String getWebsiteURL() {
         return websiteURL;
     }
 
-    public String getAbout() {
-        return about;
-    }
-
     public String getSocialMediaURL() {
         return socialMediaURL;
     }
 
-    public String getAirdropFormLink() {
-        return airdropFormLink;
-    }
-
-    public String getAirdropImage() {
-        return airdropImage;
-    }
-
-    public double getAirdropAmount() {
-        return airdropAmount;
-    }
-
-    public String getCountryOfOperation() {
-        return countryOfOperation;
-    }
-
-    public setDate getIcoStartDate() {
-        return icoStartDate;
-    }
-
-    public setDate getIcoEndDate() {
-        return icoEndDate;
-    }
-
-    public String getWhitepaperURL() {
-        return whitepaperURL;
+    public String getWhitePaperURL() {
+        return whitePaperURL;
     }
 
     public String getBountyURL() {
         return bountyURL;
     }
 
-    public String getTokenTicker() {
-        return tokenTicker;
+    public String getAirdropFormURL() {
+        return airdropFormURL;
     }
 
-    public String getPlatformAndTokenType() {
-        return platformAndTokenType;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public double getTokenPrice() {
-        return tokenPrice;
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public String getTokenSymbol() {
+        return tokenSymbol;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public String getTokensDistribute() {
+        return tokensDistribute;
+    }
+
+    public String getPricePerToken() {
+        return pricePerToken;
+    }
+
+    public String getKycOrWhitelist() {
+        return kycOrWhitelist;
     }
 
     public String getRestrictions() {
         return restrictions;
     }
 
-    public String getContactEmail() {
-        return contactEmail;
+    public String getAbout() {
+        return about;
+    }
+
+    public boolean isPremium() {
+        return isPremium;
+    }
+
+    public boolean isTermsApproved() {
+        return isTermsApproved;
+    }
+
+    public String getSentBy() {
+        return sentBy;
     }
 
     public boolean isApprovedAirdrop() {
         return approvedAirdrop;
-    }
-
-    public String getSentByPhone() {
-        return sentByPhone;
     }
 }

@@ -48,6 +48,7 @@ public class newAirdropForm extends AppCompatActivity {
     CheckBox termsRef;
 
     //Variables
+    String sentByPhone = MainActivity.currentUserPhone;
 
     String projectName;
     String projectCategory;
@@ -186,8 +187,10 @@ public class newAirdropForm extends AppCompatActivity {
         isTermsApproved = termsRef.isChecked();
 
         if(checkFormLogicIsValid()){
+
+
             //Create the airdrop object
-            Airdrop newAirdrop = new Airdrop("Success");
+            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,websiteURL,socialMedia,whitePaper,bounty,airdropForm,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,isPremium,isTermsApproved,sentByPhone,false);
 
             aAirdropsDatabaseReference.push().setValue(newAirdrop);//add a success listener
             Toast toast = (Toast.makeText(this,"Form Sent Successfully",Toast.LENGTH_SHORT));

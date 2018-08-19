@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private List<Fragment> activeFragments = new ArrayList<>();
     private DrawerLayout drawer;
+    static String currentUserPhone;
 
 
     @Override
@@ -234,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
                     // user is already signed in
+                    currentUserPhone = user.getPhoneNumber();
                 }
                 else {
                     //user is signed out
