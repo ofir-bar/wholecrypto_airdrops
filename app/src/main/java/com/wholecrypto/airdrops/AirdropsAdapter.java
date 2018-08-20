@@ -55,7 +55,7 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
                 intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_DESCRIPTION, airdrop.getAirdropDescription());
 */
                 //Start Activity with details on a specific airdrop
-                v.getContext().startActivity(intent);
+                //v.getContext().startActivity(intent);
 
             }
         });

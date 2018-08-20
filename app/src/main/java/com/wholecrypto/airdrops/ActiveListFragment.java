@@ -20,8 +20,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AirdropsListFragment extends Fragment {
-    private static final String TAG = "AirdropsListFragment";
+public class ActiveListFragment extends Fragment {
+    private static final String TAG = "ActiveListFragment";
     static DatabaseReference airdropsRef;
     private AirdropsAdapter adapter;
     private ChildEventListener approvedAirdropsListener;
@@ -32,7 +32,7 @@ public class AirdropsListFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.e(TAG,"Fragment onCreateView");
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airdrops_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_active_list, container, false);
 
         // loading animation
         final ProgressBar progressBar = view.findViewById(R.id.spin_kit);

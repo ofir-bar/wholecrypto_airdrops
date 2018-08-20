@@ -2,7 +2,7 @@
 <android.support.v7.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="#FFF3E0"
+    android:layout_height="100dp"
+    android:background="#ff9c00"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     />

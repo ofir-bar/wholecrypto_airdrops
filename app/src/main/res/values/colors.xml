@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#f7ac15</color>
-    <color name="colorPrimaryDark">#ef9300</color>
+    <color name="colorPrimaryDark">#3C4564</color>
     <color name="colorAccent">#e55300</color>
+
+
+    <color name="fire_gradient_1">#E55300</color>
+    <color name="fire_gradient_2">#DE3055</color>
+    <color name="fire_gradient_3">#B23C82</color>
+    <color name="fire_gradient_4">#734D8F</color>
+    <color name="fire_gradient_5">#3D507C</color>
+    <color name="fire_gradient_6">#2F4858</color>
+
+
+    <color name="top_list_airdrop">#3C4564</color>
+    <color name="bottom_list_airdrop">#8E96B5</color>
+
+    <color name="airdrop_card_background">#697597</color>
+
+
 </resources>

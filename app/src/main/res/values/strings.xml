@@ -14,6 +14,10 @@
     <string name="nav_close_drawer">Close navigation drawer</string>
 
 
+    <!--Main Screen -->
+    <string name="my_portfolio">MY PORTFOLIO</string>
+    <!-- Main Screen -->
+
     <!--faq airdrops -->
     <string name="faq_title">Airdrops FAQ</string>
 
@@ -91,7 +95,6 @@
     <string name="list_your_airdrop">List Your Airdrop</string>
 
 
-
     <!-- Register new airdrop -->
 
     <string name="new_form_header">If you don\'t know some form, leave it blank</string>
@@ -156,7 +159,8 @@
         <item>Whitelist only</item>
     </string-array>
 
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

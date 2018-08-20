@@ -1,13 +1,18 @@
 package com.wholecrypto.airdrops;
 
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +21,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,9 +67,9 @@ public class MainActivity extends AppCompatActivity implements
         super.onPostResume();
         Log.e(TAG,"onPostResume");
 
-            Fragment defaultFragment = new AirdropsListFragment();
+            Fragment defaultFragment = new ActiveListFragment();
             FragmentTransaction mainFragmentTransaction = fragmentManager.beginTransaction();
-            mainFragmentTransaction.add(R.id.content_frame, defaultFragment);
+            mainFragmentTransaction.add(R.id.main_activity_viewpager, defaultFragment);
             Log.e(TAG, "commit");
             mainFragmentTransaction.commit();
 
@@ -115,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements
         switch(id) {
 
             case R.id.nav_list_airdrops:
-                listItemFragment = new AirdropsListFragment();
+                listItemFragment = new ActiveListFragment();
             break;
 
             case R.id.nav_publish_airdrop:
@@ -123,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements
                 break;
 
             default:
-                listItemFragment = new AirdropsListFragment();
+                listItemFragment = new ActiveListFragment();
         }
 
         if (listItemFragment != null){
@@ -131,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements
             if(!activeFragments.contains(listItemFragment)){
                 activeFragments.add(listItemFragment);
             }
-            navChosenFragment.replace(R.id.content_frame,listItemFragment);
+            navChosenFragment.replace(R.id.main_activity_viewpager,listItemFragment);
             navChosenFragment.commit();
         }
         else {
@@ -155,25 +161,12 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()){
-            case R.id.action_menu_faq:
-                Intent intent = new Intent(this,FaqActivity.class);
-                startActivity(intent);
-                return true;
-
-            case R.id.action_menu_logout:
-                AuthUI.getInstance().signOut(this);
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -195,6 +188,28 @@ public class MainActivity extends AppCompatActivity implements
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false); //Disables the app title
+
+        MainActivity.SectionsPagerAdapter pagerAdapter = new MainActivity.SectionsPagerAdapter(getSupportFragmentManager());
+        ViewPager pager = findViewById(R.id.main_activity_viewpager);
+
+        pager.setAdapter(pagerAdapter);
+
+        TabLayout tabLayout = findViewById(R.id.tab_dots);
+        tabLayout.setupWithViewPager(pager, true);
+
+/*
+        GradientDrawable gradientDrawable = new GradientDrawable(
+                GradientDrawable.Orientation.LEFT_RIGHT,
+                new int[]{ContextCompat.getColor(this, R.color.fire_gradient_1),
+                        ContextCompat.getColor(this, R.color.fire_gradient_2),
+                        ContextCompat.getColor(this, R.color.fire_gradient_3),
+                        ContextCompat.getColor(this, R.color.fire_gradient_4),
+                        ContextCompat.getColor(this, R.color.fire_gradient_5),
+                        ContextCompat.getColor(this, R.color.fire_gradient_6)});
+
+        findViewById(R.id.toolbar).setBackground(gradientDrawable);
+*/
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
                 drawer,
@@ -226,6 +241,37 @@ public class MainActivity extends AppCompatActivity implements
         mNavigationView = findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
     }
+
+
+    //Tell a view pager about its pages using a fragment pager adapter,this is the inner class for this adapter.
+    private class SectionsPagerAdapter extends FragmentPagerAdapter {
+        public SectionsPagerAdapter(FragmentManager fm){
+            super(fm);
+        }
+
+        @Override
+        public int getCount(){
+            return 3;
+        }
+
+        @Override
+        public Fragment getItem(int position){
+            switch (position){
+                case 0:
+                    return new ActiveListFragment();
+                case 1:
+                    return new UpcomingListFragment();
+                case 2:
+                    return new PastListFragment();
+            }
+            return null;
+        }
+
+
+
+
+    }
+
 
     private void setupAuthentication(){
         mFirebaseAuth = FirebaseAuth.getInstance();
