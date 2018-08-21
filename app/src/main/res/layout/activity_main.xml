@@ -11,25 +11,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:layout_scrollFlags="scroll|enterAlways" />
+            <include
+                layout="@layout/toolbar_main"
+                android:id="@+id/toolbar"/>
 
-            <android.support.design.widget.TabLayout
-                android:id="@+id/tab_dots"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                app:tabBackground="@drawable/tab_selector"
-                app:tabGravity="center"
-                app:tabIndicatorHeight="0dp" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"/>
+
+
+
 
 
         </android.support.design.widget.AppBarLayout>
@@ -41,59 +45,8 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
         <!-- we use the FrameLayout to display fragments in it
-        app:layout_constraintGuide_percent="0.3"
-        <Button
-            android:id="@+id/notification_button"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_circle"
-            app:layout_constraintBottom_toTopOf="@+id/main_activity_viewpager"
-            app:layout_constraintEnd_toEndOf="parent" />
 
 
-        <TextView
-            android:id="@+id/my_portfolio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/my_portfolio"
-            android:textColor="#ffffff"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/total_airdrops_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Airdrops done:"
-            android:textColor="#ffffff"
-            android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="@+id/my_wallet_text"
-            app:layout_constraintTop_toBottomOf="@+id/my_wallet_text" />
-
-        <TextView
-            android:id="@+id/my_wallet_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Wallet:"
-            android:textColor="#ffffff"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/my_portfolio"
-            app:layout_constraintTop_toBottomOf="@+id/my_portfolio" />
-
-        <TextView
-            android:id="@+id/total_earned_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Total earned:"
-            android:textColor="#ffffff"
-            android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="@+id/total_airdrops_text"
-            app:layout_constraintTop_toBottomOf="@+id/total_airdrops_text" />
 -->
 
     </android.support.design.widget.CoordinatorLayout>
