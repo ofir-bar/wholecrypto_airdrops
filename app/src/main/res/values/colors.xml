@@ -13,10 +13,10 @@
     <color name="fire_gradient_6">#2F4858</color>
 
 
-    <color name="top_list_airdrop">#3C4564</color>
-    <color name="bottom_list_airdrop">#8E96B5</color>
+    <color name="top_list_airdrop">#697597</color>
+    <color name="bottom_list_airdrop">#3C4564</color>
 
-    <color name="airdrop_card_background">#697597</color>
+    <color name="airdrop_card_background">#8E96B5</color>
 
 
 </resources>

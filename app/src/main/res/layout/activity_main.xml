@@ -9,7 +9,9 @@
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background"
+        >
 
 
         <android.support.design.widget.AppBarLayout
@@ -30,11 +32,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:tabBackground="@drawable/tab_selector"
                     app:tabGravity="center"
-                    app:tabIndicatorHeight="0dp"/>
-
-
-
-
+                    app:tabIndicatorHeight="0dp"
+                    android:background="@color/top_list_airdrop"/>
 
         </android.support.design.widget.AppBarLayout>
 

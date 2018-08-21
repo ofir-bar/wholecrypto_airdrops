@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="100dp"
     android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
@@ -16,36 +16,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.20999998"
+        card_view:srcCompat="@android:drawable/sym_def_app_icon" />
+
     <TextView
-        android:id="@+id/shoes_name"
+        android:id="@+id/project_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:text="Project Name"
+        card_view:layout_constraintStart_toEndOf="@+id/logo"
+        card_view:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(XYZ)"
+        card_view:layout_constraintStart_toEndOf="@+id/project_name"
+        card_view:layout_constraintTop_toTopOf="@+id/project_name" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Nike"
-        card_view:layout_constraintStart_toStartOf="parent"
+        android:text="Short description about "
+        card_view:layout_constraintStart_toStartOf="@+id/project_name"
+        card_view:layout_constraintTop_toBottomOf="@+id/project_name" />
+
+    <Button
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        android:id="@+id/add_to_portfolio"
+        android:background="@drawable/button_circle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
         card_view:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        card_view:layout_constraintEnd_toStartOf="@+id/add_to_portfolio"
+        card_view:layout_constraintStart_toEndOf="@+id/symbol"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/ic_block_black_24dp" />
+
     <TextView
-        android:id="@+id/shoes_model"
+        android:id="@+id/premium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="PREMIUM"
+        card_view:layout_constraintBottom_toTopOf="@+id/add_to_portfolio"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toEndOf="@+id/imageView4"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/end_in_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ends in:"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/time_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Nike Air Model #21114"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/shoes_name" />
+        android:text="32 hours"
+        card_view:layout_constraintStart_toEndOf="@+id/end_in_text"
+        card_view:layout_constraintTop_toTopOf="@+id/end_in_text" />
 
     <TextView
-        android:id="@+id/shoes_description"
+        android:id="@+id/worth_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Nike Shoes most prestige and expensive shoes for sale"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/shoes_model" />
+        android:layout_marginStart="48dp"
+        android:text="Worth:"
+        card_view:layout_constraintStart_toEndOf="@+id/time_end"
+        card_view:layout_constraintTop_toTopOf="@+id/time_end" />
 
+    <TextView
+        android:id="@+id/worth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5$"
+        card_view:layout_constraintStart_toEndOf="@+id/worth_text"
+        card_view:layout_constraintTop_toTopOf="@+id/worth_text" />
 
 
 </android.support.constraint.ConstraintLayout>

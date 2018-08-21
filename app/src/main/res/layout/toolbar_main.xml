@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="?attr/colorPrimary"
+    android:background="@drawable/main_toolbar_style"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     app:layout_scrollFlags="scroll|enterAlways"
     app:contentInsetEnd="0dp"
