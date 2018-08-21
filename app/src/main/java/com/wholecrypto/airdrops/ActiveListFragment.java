@@ -60,7 +60,7 @@ public class ActiveListFragment extends Fragment {
         airdropsRef = FirebaseDatabase.getInstance().getReference().child("airdrops");
 
         //Load the Bottom Banner Ad
-        AdView mAdView = view.findViewById(R.id.adView);
+        AdView mAdView = view.findViewById(R.id.ad_banner);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

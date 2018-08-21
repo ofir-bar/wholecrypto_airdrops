@@ -11,22 +11,23 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="PAST AIRDROPS"
+        android:layout_height="16dp"
+        android:text="PAST AIRDROP"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.github.ybq.android.spinkit.SpinKitView
             android:id="@+id/spin_kit"
@@ -45,17 +46,18 @@
 
         </android.support.v7.widget.RecyclerView>
 
-        <!--
-        ca-app-pub-3940256099942544/6300978111 testing.
-        ca-app-pub-3677276785158147/6967202646 production
-    -->
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3677276785158147/6967202646"></com.google.android.gms.ads.AdView>
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+        <!--
+        ca-app-pub-3940256099942544/6300978111 testing.
+        ca-app-pub-3677276785158147/6967202646 production
+    -->
 
     </FrameLayout>
 
