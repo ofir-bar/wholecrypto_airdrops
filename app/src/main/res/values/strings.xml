@@ -2,23 +2,29 @@
     <string name="app_name">Airdrops (Beta)</string>
     <string name="app_slogan">Free Crypto Tokens!</string>
 
-    <!--Action Menu -->
-    <string name="action_menu_faq">FAQ</string>
-    <!--Action Menu -->
-    <!--Navigation Menu Top -->
-    <string name="nav_list_airdrops">Airdrops</string>
-    <string name="nav_publish_airdrop">Publish Airdrop</string>
+    <!--
+    **********
+    Activities
+    **********
+    -->
 
-    <!-- Required Strings for the navigation drawer. used for accessibility and add the hamburger icon -->
-    <string name="nav_open_drawer">Open navigation drawer</string>
-    <string name="nav_close_drawer">Close navigation drawer</string>
+    <!-- Main Activity -->
 
-
-    <!--Main Screen -->
+    <!-- Toolbar -->
     <string name="my_portfolio">MY PORTFOLIO</string>
-    <!-- Main Screen -->
+    <!-- Toolbar -->
 
-    <!--faq airdrops -->
+    <!--airdrop_card.xml -->
+    <string name="airdrop_reward_text">Reward:</string>
+    <string name="airdrop_startingdate_text">Start</string>
+    <string name="airdrop_endingdate_text">End</string>
+    <!--airdrop_card.xml -->
+
+
+    <!-- Main Activity -->
+
+
+    <!--FAQ Airdrops-->
     <string name="faq_title">Airdrops FAQ</string>
 
     <string name="what_are_airdrops_title">What are airdrops?</string>
@@ -46,10 +52,23 @@
     <string name="app_ads_body">We offer free ad removal for 7 days if you invite your friends to our app. you can do it simply by clicking \n
     the block icon in top-right and inviting your friends. </string>
 
+    <!--FAQ Airdrops -->
 
-    <!--faq airdrops -->
 
-    <!-- Publish Airdrop Forms -->
+    <!--
+    **********
+    End of Activities
+    **********
+    -->
+
+
+    <!--
+    **********
+    Fragments
+    **********
+    -->
+
+    <!-- Publish Airdrop Fragment -->
     <string name="publish_airdrop_title">Publish New Airdrop</string>
     <string name="coin_name">Coin Name(e.g. Bitcoin)</string>
     <string name="coin_symbol">Coin Symbol(e.g. BTC)</string>
@@ -58,20 +77,9 @@
     <string name="airdrop_description_title">Airdrop Description</string>
     <string name="airdrop_description_hint">Join telegram, submit your code and complete an online form. Join here: "https://www.thisisasamplelink55.com"</string>
     <string name="airdrop_reward">Reward(e.g. 0.5 BTC)</string>
-    <!-- Publish Airdrop Forms -->
+    <!-- Publish Airdrop Fragment -->
 
-    <!--airdrop_card.xml -->
-    <string name="airdrop_reward_text">Reward:</string>
-    <string name="airdrop_startingdate_text">Start</string>
-    <string name="airdrop_endingdate_text">End</string>
-    <!--airdrop_card.xml -->
-
-
-    <!--Main menu items -->
-    <string name="options">options</string>
-    <string name="sign_out">Sign out</string>
-
-    <!-- -->
+    <!-- Sales Page Fragment  -->
     <string name="exposure_fragment_title">Exposure</string>
     <string name="exposure_fragment_body">Reach out to thousands of <b>global</b> users</string>
     <string name="exposure_fragment_bottom">With a <b>fraction</b> of marketing budget</string>
@@ -94,9 +102,10 @@
 
     <string name="list_your_airdrop">List Your Airdrop</string>
 
+    <!-- Sales Page Fragment -->
 
-    <!-- Register new airdrop -->
 
+    <!-- Airdrop Registration Fragment -->
     <string name="new_form_header">If you don\'t know some form, leave it blank</string>
     <string name="is_premium">Premium Airdrop?</string>
     <string name="ico_name">ICO Project name:</string>
@@ -116,7 +125,6 @@
     <string name="kyc_or_whitelist">KYC or Whitelist?</string>
     <string name="restrictions">Any restrictions in who can participate?</string>
     <string name="about">About your project, and what need to join the airdrop</string>
-
     <string-array name="project_category">
 
         <item> Finance </item>
@@ -151,16 +159,49 @@
         <item>Sports</item>
 
     </string-array>
-
     <string-array name="kyc_or_whitelist">
         <item>None</item>
         <item>KYC and Whitelist</item>
         <item>KYC only</item>
         <item>Whitelist only</item>
     </string-array>
+    <!-- Airdrop Registration Fragment -->
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--
+    **********
+    End of Fragments
+    **********
+    -->
+
+
+
+    <!--
+   **********
+   Others (Menus,Navigation,etc)
+   **********
+   -->
+
+    <!--Navigation Menu Top -->
+    <string name="nav_airdrops">Airdrops</string>
+    <string name="nav_my_portfolio">My Portfolio</string>
+    <string name="nav_list_airdrop">List Airdrop</string>
+    <string name="nav_faq">FAQ</string>
+    <string name="nav_block_ads">Block Ads</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_category_contact">Contact</string>
+    <string name="nav_contact">Contact Us</string>
+    <string name="nav_logout">Log Out</string>
+
+    <!-- Required Strings for the navigation drawer. used for accessibility and add the hamburger icon -->
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+
+
+    <!--
+    **********
+    End of Others (Menus,Navigation,etc)
+    **********
+    -->
 
 
 </resources>

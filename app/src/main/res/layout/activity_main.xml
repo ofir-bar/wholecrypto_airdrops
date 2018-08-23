@@ -10,7 +10,7 @@
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/main_background"
+        android:background="@color/main_background"
         >
 
 
@@ -32,8 +32,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:tabBackground="@drawable/tab_selector"
                     app:tabGravity="center"
-                    app:tabIndicatorHeight="0dp"
-                    android:background="@color/top_list_airdrop"/>
+                    app:tabIndicatorHeight="0dp"/>
 
         </android.support.design.widget.AppBarLayout>
 
@@ -55,7 +54,6 @@
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu_nav"/>
 
 

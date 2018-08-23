@@ -120,11 +120,11 @@ public class MainActivity extends AppCompatActivity implements
 
         switch(id) {
 
-            case R.id.nav_list_airdrops:
+            case R.id.nav_airdrops:
                 listItemFragment = new ActiveListFragment();
             break;
 
-            case R.id.nav_publish_airdrop:
+            case R.id.nav_list_airdrop:
                 listItemIntent = new Intent(this,SalesMainPageActivity.class);
                 break;
 
@@ -198,18 +198,6 @@ public class MainActivity extends AppCompatActivity implements
         TabLayout tabLayout = findViewById(R.id.tab_dots);
         tabLayout.setupWithViewPager(pager, true);
 
-/*
-        GradientDrawable gradientDrawable = new GradientDrawable(
-                GradientDrawable.Orientation.LEFT_RIGHT,
-                new int[]{ContextCompat.getColor(this, R.color.fire_gradient_1),
-                        ContextCompat.getColor(this, R.color.fire_gradient_2),
-                        ContextCompat.getColor(this, R.color.fire_gradient_3),
-                        ContextCompat.getColor(this, R.color.fire_gradient_4),
-                        ContextCompat.getColor(this, R.color.fire_gradient_5),
-                        ContextCompat.getColor(this, R.color.fire_gradient_6)});
-
-        findViewById(R.id.toolbar).setBackground(gradientDrawable);
-*/
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
                 drawer,

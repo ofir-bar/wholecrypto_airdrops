@@ -3,7 +3,7 @@
 
     <gradient
         android:angle="270"
-        android:startColor="@color/top_list_airdrop"
+        android:startColor="@color/text"
         android:type="linear"
         />
 
