@@ -27,7 +27,7 @@
             android:text="@string/my_portfolio"
             android:textSize="22sp"/>
 
-        <!-- airdrops done -->
+        <!-- Airdrops to do -->
         <LinearLayout
             android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
@@ -36,26 +36,26 @@
 
 
             <TextView
-                android:id="@+id/total_airdrops_text"
+                android:id="@+id/airdrops_todo_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/airdrop_todo_title"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Airdrops done:"
                 android:textSize="22sp"/>
 
 
             <TextView
-                android:id="@+id/total_airdrops_text2"
+                android:id="@+id/airdrops_todo_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
-                android:text=" 2"
                 android:textSize="22sp"/>
-
-
         </LinearLayout>
+        <!-- Airdrops to do -->
 
-        <!-- My Wallet -->
+        <!-- airdrops done -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,47 +63,25 @@
 
 
             <TextView
-                android:id="@+id/my_wallet_text"
+                android:id="@+id/airdrops_done_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Wallet:"
+                android:text="@string/airdrop_done_title"
                 android:textSize="22sp"/>
 
 
             <TextView
-                android:id="@+id/my_wallet_text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
-                android:textSize="22sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/total_earned_text"
+                android:id="@+id/airdrops_done_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Total earned:"
+                android:text="2"
                 android:textSize="22sp"/>
 
-            <TextView
-                android:id="@+id/total_earned_text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text=" 0$"
-                android:textSize="22sp" />
 
         </LinearLayout>
-
+        <!-- airdrops done -->
 
 
     </LinearLayout>

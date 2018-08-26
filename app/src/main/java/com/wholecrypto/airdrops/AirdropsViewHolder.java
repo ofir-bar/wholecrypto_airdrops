@@ -15,23 +15,27 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setAirdropData(Airdrop airdrop) {
-/*
+
         // initialise card views items and set value in them
-        TextView coinName = view.findViewById(R.id.coin_name);
-        coinName.setText(airdrop.getCoinName());
+        TextView projectName = view.findViewById(R.id.project_name);
+        projectName.setText(airdrop.getProjectName());
 
-        TextView coinSymbol = view.findViewById(R.id.coin_symbol);
-        coinSymbol.setText(airdrop.getCoinSymbol());
+        TextView symbol = view.findViewById(R.id.symbol);
+        symbol.setText(airdrop.getTokenSymbol());
 
-        TextView airdropStartingDate = view.findViewById(R.id.airdrop_start_date);
-        airdropStartingDate.setText(airdrop.getAirdropStartingDate());
+        TextView about = view.findViewById(R.id.about);
+        about.setText(airdrop.getAbout());
 
-        TextView airdropEndingDate = view.findViewById(R.id.airdrop_end_date);
-        airdropEndingDate.setText(airdrop.getAirdropEndingDate());
+        TextView time_end = view.findViewById(R.id.time_end);
+        time_end.setText(airdrop.getEndDate());
 
-        TextView airdropDescription = view.findViewById(R.id.airdrop_description);
-        airdropDescription.setText(airdrop.getAirdropDescription());
-*/
+        TextView is_premium = view.findViewById(R.id.premium);
+
+        //If airdrop is not premium, don't show a premium tag
+        if(!airdrop.isPremium()){
+            is_premium.setText("");
+        }
+
     }
 
 

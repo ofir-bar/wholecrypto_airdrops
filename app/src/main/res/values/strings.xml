@@ -18,6 +18,9 @@
     <string name="airdrop_reward_text">Reward:</string>
     <string name="airdrop_startingdate_text">Start</string>
     <string name="airdrop_endingdate_text">End</string>
+    <string name="airdrop_done_title">Airdrops Done:</string>
+    <string name="airdrop_todo_title">Airdrops TODO:</string>
+
     <!--airdrop_card.xml -->
 
 
@@ -166,6 +169,23 @@
         <item>Whitelist only</item>
     </string-array>
     <!-- Airdrop Registration Fragment -->
+
+    <!-- Active Airdrops Fragment -->
+    <string name="active_airdrops">Active Airdrops</string>
+    <!-- Active Airdrops Fragment -->
+
+
+    <!-- Upcoming Airdrops Fragment -->
+    <string name="upcoming_airdrops">Upcoming Airdrops</string>
+    <!-- Upcoming Airdrops Fragment -->
+
+
+    <!-- Past Airdrops Fragment -->
+    <string name="past_airdrops">Past Airdrops</string>
+    <!-- Past Airdrops Fragment -->
+
+
+
 
     <!--
     **********

@@ -13,8 +13,8 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/toolbar_main"
-            android:id="@+id/toolbar"/>
+            layout="@layout/toolbar_faq"
+            android:id="@+id/toolbar_faq"/>
 
         <TextView
             android:id="@+id/what_are_airdrops_title"

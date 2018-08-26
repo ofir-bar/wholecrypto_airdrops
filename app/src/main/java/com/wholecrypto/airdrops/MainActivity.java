@@ -1,7 +1,6 @@
 package com.wholecrypto.airdrops;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -21,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.ads.MobileAds;
@@ -128,6 +127,23 @@ public class MainActivity extends AppCompatActivity implements
                 listItemIntent = new Intent(this,SalesMainPageActivity.class);
                 break;
 
+            case R.id.nav_portfolio:
+                break;
+
+            case R.id.nav_faq:
+                listItemIntent = new Intent(this,FaqActivity.class);
+                break;
+
+            case R.id.nav_block_ads:
+                break;
+
+            case R.id.nav_notifications:
+                break;
+
+            case R.id.nav_logout:
+                //Log out the user
+                AuthUI.getInstance().signOut(this);
+
             default:
                 listItemFragment = new ActiveListFragment();
         }
@@ -141,7 +157,12 @@ public class MainActivity extends AppCompatActivity implements
             navChosenFragment.commit();
         }
         else {
-            startActivity(listItemIntent);
+            if(listItemIntent != null){
+                startActivity(listItemIntent);
+            }
+            else {
+                Toast.makeText(this,"Unavailable in this version", Toast.LENGTH_SHORT).show();
+            }
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -204,7 +225,8 @@ public class MainActivity extends AppCompatActivity implements
                 toolbar,
                 R.string.nav_open_drawer,
                 R.string.nav_close_drawer){
-            //Disable bug when clicking on hamburger icon. comment out to see effect.
+
+            //Disable bug when clicking on hamburger icon back and forth has rotating effect. comment out to see effect.
             @Override
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
@@ -280,7 +302,10 @@ public class MainActivity extends AppCompatActivity implements
                                     .setPrivacyPolicyUrl("https://superapp.example.com/privacy-policy.html")
                                     .setIsSmartLockEnabled(false)
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.PhoneBuilder().build()))
+                                            new AuthUI.IdpConfig.PhoneBuilder().build(),
+                                            new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                            new AuthUI.IdpConfig.EmailBuilder().build())
+                                    )
                                     .build(),
                             RC_SIGN_IN);
                 }

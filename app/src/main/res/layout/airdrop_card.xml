@@ -10,8 +10,8 @@
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     card_view:cardElevation="2dp"
-    card_view:cardCornerRadius="4dp"
-    android:background="@color/text_boxes">
+    card_view:cardCornerRadius="10dp"
+    android:background="@color/colorAccent">
 
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
 
     <TextView
         android:textColor="@color/subtext"
-        android:id="@+id/description"
+        android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -60,18 +60,20 @@
 
     <Button
         android:id="@+id/add_to_portfolio"
-        android:background="@drawable/button_circle"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/button_circle"
         card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintEnd_toEndOf="@+id/premium"
+        card_view:layout_constraintStart_toStartOf="@+id/premium"
         card_view:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/isRestricted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -85,12 +87,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
         android:text="PREMIUM"
+        android:textColor="#FFD600"
         card_view:layout_constraintBottom_toTopOf="@+id/add_to_portfolio"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toEndOf="@+id/imageView4"
         card_view:layout_constraintTop_toTopOf="parent"
         card_view:layout_constraintVertical_bias="1.0" />
 

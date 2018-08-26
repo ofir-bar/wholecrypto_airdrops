@@ -20,17 +20,18 @@ public class DetailedAirdropActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_airdrop);
 
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //get coin name from intent
         String coinName =(String)getIntent().getExtras().get(EXTRA_COINNAME);
         //Set app label as coinname
-        actionBar.setTitle(coinName);
+        toolbar.setTitle(coinName);
 
+
+/*
         //get values from intent
         String coinSymbol =(String)getIntent().getExtras().get(EXTRA_COINSYMBOL);
         String airdropStartingDate =(String)getIntent().getExtras().get(EXTRA_AIRDROP_STARTING_DATE);
@@ -60,6 +61,6 @@ public class DetailedAirdropActivity extends AppCompatActivity {
 
         TextView tv_airdropRewardCoinSymbol = findViewById(R.id.airdrop_reward_coin_symbol);
         tv_airdropRewardCoinSymbol.setText("("+coinSymbol+")");
-
+*/
     }
 }

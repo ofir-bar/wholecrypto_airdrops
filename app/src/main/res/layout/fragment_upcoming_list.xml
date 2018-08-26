@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UPCOMING AIRDROP"
+        android:text="@string/upcoming_airdrops"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_10percent"
         app:layout_constraintEnd_toEndOf="parent"
