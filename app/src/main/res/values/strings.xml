@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Airdrops (Beta)</string>
-    <string name="app_slogan">Free Crypto Tokens!</string>
+    <string name="app_name">Airdrops by WholeCrypto(Beta)</string>
+    <string name="app_slogan">World\'s airdrops in one place, for free</string>
 
     <!--
     **********
@@ -30,30 +30,31 @@
     <!--FAQ Airdrops-->
     <string name="faq_title">Airdrops FAQ</string>
 
-    <string name="what_are_airdrops_title">What are airdrops?</string>
-    <string name="what_are_airdrops_body">Airdrops are a distribution of cryptocurrencies for free. \n when a new token or coin comes out, developers
-    want to get attention for their project. therefore they distribute free cryptocurrencies if you help them get their name out there </string>
+    <string name="what_are_airdrops_title"><b>What are airdrops?</b></string>
+    <string name="what_are_airdrops_body">Airdrops are a distribution of cryptocurrencies for free. \n new projects come out every once in a while, and developers want to
+    get attention, attract investors and build a community for their project. Therefore they may decide to distribute a small amount of their token by doing different things to promote the marketing of their project</string>
 
-    <string name="join_airdrop_title">I want to join an airdrop, what I need to do?</string>
-    <string name="join_airdrop_body">Each new cryptocurrency project have their own airdrop requirements. some may require you to only join a telegram group,\n
-    others may require you to like them on social media or fill an online form, etc.</string>
+    <string name="join_airdrop_title"><b>I want to join an airdrop, what do I need to do?</b></string>
+    <string name="join_airdrop_body">Each project have their own airdrop requirements. some may require you to only join a telegram group,\n
+    others may require you to like them on social media or fill an online form. It is important to note that some airdrops restrict their users, meaning that you can apply for the airdrop only if you have certain requirments.\nfor example,
+    a project may require you to live in a certain country, like the USA.</string>
 
-    <string name="tokens_purpose_title">What can I do with tokens?</string>
-    <string name="tokens_purpose_body">Your tokens worth money. you can either sell them immediately upon recieveing them,\n
-    or you can wait until the tokens value will raise and sell them at a higher price.</string>
+    <string name="tokens_purpose_title"><b>What can I do with tokens?</b></string>
+    <string name="tokens_purpose_body">Your tokens worth money. you can either sell them immediately upon receiving them,\n
+    or you can wait until the tokens value will raise and sell them at a higher price, if you believe in the project.</string>
 
-    <string name="airdrop_reward_title">How much tokens do I get?</string>
+    <string name="airdrop_reward_title"><b>How much tokens do I get?</b></string>
     <string name="airdrop_reward_body">Each airdrop will give you different amount of tokens. what is important is not the amount of tokens you get,\n
     but the total value of the tokens, so you get as much money as possible.</string>
 
-    <string name="airdrop_scams_title">Can I register to an airdrop and not get my tokens?</string>
+    <string name="airdrop_scams_title"><b>Can I register to an airdrop and not get my tokens?</b></string>
     <string name="airdrop_scams_body">It is possible that you would fill the airdrop requirements and not get your tokens.\n
-    however, all airdrops listed in this app are going through a verification process. our team is working hard to ensure all airdrops delivering their promises.\n
-        However, we can't guarantee 100% legit airdrops. To fight airdrop scammers, you can report on airdrops.</string>
+    however,by using this app, a few steps are taken to combat these scam airdrops. all our airdrops are going through inspection process.\n
+        We welcome you to report a specific airdrop if it is not delivering what is promised.\n
+    We are also working on implementing different strategies to track airdrop rewards, so stay tuned.</string>
 
-    <string name="app_ads_title">I hate ads! how can I disable them in this app?</string>
-    <string name="app_ads_body">We offer free ad removal for 7 days if you invite your friends to our app. you can do it simply by clicking \n
-    the block icon in top-right and inviting your friends. </string>
+    <string name="app_ads_title"><b>I hate ads! how can I disable them in this app?</b></string>
+    <string name="app_ads_body">In the current version you can\'t disable ads, but with minimum distraction. you will, however, be able to disable ads for free in future releases simply by inviting your friends!</string>
 
     <!--FAQ Airdrops -->
 
@@ -110,6 +111,7 @@
 
     <!-- Airdrop Registration Fragment -->
     <string name="new_form_header">If you don\'t know some form, leave it blank</string>
+    <string name="note_header">Please note: do not close the app while editing this form, it will erase your data.</string>
     <string name="is_premium">Premium Airdrop?</string>
     <string name="ico_name">ICO Project name:</string>
 
@@ -124,10 +126,10 @@
     <string name="token_symbol">Token Symbol</string>
     <string name="project_platform">Platform or Token Type (e.g. Ethereum, ERC20)</string>
     <string name="token_amount">Tokens Distributed (e.g. 50 NEW) </string>
-    <string name="price_per_token">Price per token (e.g. 1 NEW = 0.001 ETH)  </string>
+    <string name="price_per_token">Price per token in USD (e.g. 1 NEW = 0.1$)  </string>
     <string name="kyc_or_whitelist">KYC or Whitelist?</string>
     <string name="restrictions">Any restrictions in who can participate?</string>
-    <string name="about">About your project, and what need to join the airdrop</string>
+    <string name="about">Tell about your project</string>
     <string-array name="project_category">
 
         <item> Finance </item>
@@ -216,6 +218,12 @@
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
 
+
+    <!-- Error Messages -->
+    <string name="version_unavailable">Unavailable in this version</string>
+    <string name="data_unavailable">unavailable</string>
+
+    <!-- Error Messages -->
 
     <!--
     **********

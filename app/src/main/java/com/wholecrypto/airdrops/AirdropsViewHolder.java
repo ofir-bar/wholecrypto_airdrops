@@ -29,12 +29,15 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
         TextView time_end = view.findViewById(R.id.time_end);
         time_end.setText(airdrop.getEndDate());
 
-        TextView is_premium = view.findViewById(R.id.premium);
+        //Calculate and set token worth
+        TextView tokenWorthText = view.findViewById(R.id.worth);
+        //Calculate the estimate worth of 1 Token
+        double tokenWorth = Double.valueOf(airdrop.getPricePerToken() ) * Double.valueOf(airdrop.getTokensDistribute());
 
-        //If airdrop is not premium, don't show a premium tag
-        if(!airdrop.isPremium()){
-            is_premium.setText("");
-        }
+        tokenWorthText.setText(String.valueOf(tokenWorth));
+
+
+
 
     }
 

@@ -23,11 +23,13 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
+        android:visibility="invisible"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toTopOf="parent"
         card_view:layout_constraintVertical_bias="0.20999998"
-        card_view:srcCompat="@android:drawable/sym_def_app_icon" />
+        card_view:srcCompat="@android:drawable/sym_def_app_icon"
+        />
 
     <TextView
         android:textColor="@color/text"
@@ -35,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Project Name"
+        android:text="@string/data_unavailable"
         card_view:layout_constraintStart_toEndOf="@+id/logo"
         card_view:layout_constraintTop_toTopOf="@+id/logo" />
 
@@ -44,56 +46,30 @@
         android:id="@+id/symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(XYZ)"
+        android:text="@string/data_unavailable"
         card_view:layout_constraintStart_toEndOf="@+id/project_name"
         card_view:layout_constraintTop_toTopOf="@+id/project_name" />
 
     <TextView
-        android:textColor="@color/subtext"
         android:id="@+id/about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="Short description about "
+        android:text="@string/data_unavailable"
+        android:textColor="@color/subtext"
+        card_view:layout_constraintBottom_toTopOf="@+id/time_end"
+        card_view:layout_constraintEnd_toEndOf="@+id/worth"
         card_view:layout_constraintStart_toStartOf="@+id/project_name"
         card_view:layout_constraintTop_toBottomOf="@+id/project_name" />
-
-    <Button
-        android:id="@+id/add_to_portfolio"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_circle"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="@+id/premium"
-        card_view:layout_constraintStart_toStartOf="@+id/premium"
-        card_view:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/isRestricted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        card_view:layout_constraintEnd_toStartOf="@+id/add_to_portfolio"
         card_view:layout_constraintStart_toEndOf="@+id/symbol"
-        card_view:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/premium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="24dp"
-        android:text="PREMIUM"
-        android:textColor="#FFD600"
-        card_view:layout_constraintBottom_toTopOf="@+id/add_to_portfolio"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="1.0" />
+        card_view:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:textColor="@color/text"
@@ -113,27 +89,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="32 hours"
+        android:text="@string/data_unavailable"
         card_view:layout_constraintStart_toEndOf="@+id/end_in_text"
         card_view:layout_constraintTop_toTopOf="@+id/end_in_text" />
 
     <TextView
-        android:textColor="@color/text"
         android:id="@+id/worth_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:text="Worth:"
-        card_view:layout_constraintStart_toEndOf="@+id/time_end"
+        android:text="Est. Worth:"
+        android:textColor="@color/text"
+        card_view:layout_constraintEnd_toStartOf="@+id/worth"
         card_view:layout_constraintTop_toTopOf="@+id/time_end" />
 
     <TextView
-        android:textColor="#1db954"
         android:id="@+id/worth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5$"
-        card_view:layout_constraintStart_toEndOf="@+id/worth_text"
+        android:layout_marginEnd="8dp"
+        android:text="@string/data_unavailable"
+        android:textColor="#1db954"
+        card_view:layout_constraintEnd_toEndOf="parent"
         card_view:layout_constraintTop_toTopOf="@+id/worth_text" />
 
 

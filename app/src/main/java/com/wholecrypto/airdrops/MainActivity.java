@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements
                 break;
 
             case R.id.nav_portfolio:
+                Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_faq:
@@ -135,9 +136,11 @@ public class MainActivity extends AppCompatActivity implements
                 break;
 
             case R.id.nav_block_ads:
+                Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_notifications:
+                Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_logout:

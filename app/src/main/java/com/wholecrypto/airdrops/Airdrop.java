@@ -21,11 +21,13 @@ public class Airdrop {
     private String restrictions;
     private String about;
     private boolean isPremium;
-    private boolean isTermsApproved;
     private String sentBy;
     private boolean approvedAirdrop;
+    private String claimInstructions;
 
-    public Airdrop(String projectName, String projectCategory, String websiteURL, String socialMediaURL, String whitePaperURL, String bountyURL, String airdropFormURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, boolean isTermsApproved, String sentBy, boolean approvedAirdrop) {
+
+
+    public Airdrop(String projectName, String projectCategory, String websiteURL, String socialMediaURL, String whitePaperURL, String bountyURL, String airdropFormURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
         this.projectName = projectName;
         this.projectCategory = projectCategory;
         this.websiteURL = websiteURL;
@@ -43,9 +45,10 @@ public class Airdrop {
         this.restrictions = restrictions;
         this.about = about;
         this.isPremium = isPremium;
-        this.isTermsApproved = isTermsApproved;
         this.sentBy = sentBy;
         this.approvedAirdrop = approvedAirdrop;
+        this.claimInstructions = claimInstructions;
+
     }
 
     public Airdrop(){}  //Required for firebase
@@ -118,10 +121,6 @@ public class Airdrop {
         return isPremium;
     }
 
-    public boolean isTermsApproved() {
-        return isTermsApproved;
-    }
-
     public String getSentBy() {
         return sentBy;
     }
@@ -129,4 +128,9 @@ public class Airdrop {
     public boolean isApprovedAirdrop() {
         return approvedAirdrop;
     }
+
+    public String getClaimInstructions() {
+        return claimInstructions;
+    }
+
 }

@@ -46,13 +46,20 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), DetailedAirdropActivity.class);
 
-/*
+
                 //Gathers all details from the tapped airdrop and pass it to the airdrop-in detail activity
-                intent.putExtra(DetailedAirdropActivity.EXTRA_COINNAME, airdrop.getCoinSymbol());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_COINSYMBOL, airdrop.getCoinSymbol());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_ENDING_DATE, airdrop.getAirdropEndingDate());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_AIRDROP_DESCRIPTION, airdrop.getAirdropDescription());
-*/
+                intent.putExtra(DetailedAirdropActivity.EXTRA_PROJECT_NAME_SYMBOL, airdrop.getProjectName());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_CATEGORY, airdrop.getProjectCategory());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_RESTRICTIONS, airdrop.getRestrictions());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_ABOUT, airdrop.getAbout());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_STARTING_DATE, airdrop.getStartDate());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_ENDING_DATE, airdrop.getEndDate());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_TOKENS_DISTRIBUTED, airdrop.getTokensDistribute());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_PRICE_PER_TOKEN, airdrop.getPricePerToken());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_SOCIAL_MEDIA, airdrop.getSocialMediaURL());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_CLAIM_INSTRUCTIONS, airdrop.getClaimInstructions());
+
+
                 //Start Activity with details on a specific airdrop
                 v.getContext().startActivity(intent);
 

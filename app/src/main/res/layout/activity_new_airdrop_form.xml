@@ -21,6 +21,15 @@
         android:text="@string/new_form_header" />
     <!-- Header -->
 
+    <!-- Header -->
+    <TextView
+        android:id="@+id/note_header"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_header" />
+    <!-- Header -->
+
 
 
     <!-- ICO Project name ? -->
@@ -35,6 +44,7 @@
 
         <EditText
             android:background="@drawable/rounded_edittext"
+            android:textColor="#000000"
             android:layout_gravity="center"
             android:id="@+id/icoProjectName"
             android:layout_width="wrap_content"
@@ -59,13 +69,14 @@
             android:id="@+id/projectCategoryHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/project_category" />
+            android:text="@string/project_category"
+            android:textColor="#000000"/>
 
         <Spinner
             android:layout_marginStart="16dp"
             android:id="@+id/projectCategory"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
     <!-- Project Category -->
@@ -88,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
             android:inputType="textUri" />
     <!-- Website URL -->
 
@@ -109,7 +121,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textUri"/>
+            android:inputType="textUri"
+            android:textColor="#000000" />
 
     <!-- Social Media URLs -->
 
@@ -131,7 +144,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textUri"/>
+            android:inputType="textUri"
+            android:textColor="#000000"/>
     <!-- White Paper URL -->
 
 
@@ -152,7 +166,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textUri"/>
+            android:inputType="textUri"
+            android:textColor="#000000"
+            />
     <!-- Bounty URL -->
 
 
@@ -173,7 +189,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textUri"/>
+            android:inputType="textUri"
+            android:textColor="#000000"
+            />
     <!-- Airdrop Form URL -->
 
 
@@ -199,7 +217,9 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_date_range_black_24dp"
             android:hint="@string/airdrop_starting_date"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:textColor="#000000"
+            />
 
 
 
@@ -211,7 +231,9 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_date_range_black_24dp"
             android:hint="@string/airdrop_ending_date"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:textColor="#000000"
+            />
 
     </LinearLayout>
     <!-- Airdrop Dates -->
@@ -234,7 +256,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textCapCharacters"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        />
     <!-- Token Symbol -->
 
 
@@ -256,7 +280,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:textColor="#000000"
+        />
     <!-- Platform Type -->
 
 
@@ -282,6 +308,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:textColor="#000000"
             />
     <!-- Token distributed Amount -->
 
@@ -306,6 +333,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textColor="#000000"
         />
     <!-- Price Per Token -->
 
@@ -324,14 +352,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/kyc_or_whitelist"
-            android:id="@+id/kycOrWhitelistHeader"/>
+            android:id="@+id/kycOrWhitelistHeader"
+            android:textColor="#000000"
+            />
 
         <Spinner
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
             android:id="@+id/kycOrWhitelist"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            />
 
     </LinearLayout>
 
@@ -353,9 +385,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_edittext"
-            android:ems="10"/>
+            android:ems="10"
+            android:textColor="#000000"
+            />
     <!-- Restrictions -->
 
+    <!-- About Header -->
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutHeader"
+        android:text="@string/about"/>
+    <!-- About Header -->
 
     <!-- About -->
     <EditText
@@ -365,26 +408,57 @@
         android:gravity="start"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:hint="@string/about"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        />
     <!-- About -->
 
 
-    <!-- is Premium ? -->
+
+    <!-- About Header -->
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/claim_instructionsHeader"
+        android:text="How to claim the airdrop:"/>
+    <!-- About Header -->
+
+
+    <!-- Claim Instructions -->
+    <EditText
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:id="@+id/claim_instructions"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        />
+    <!-- Claim Instructions -->
+
+
+    <!-- is Premium ?
     <CheckBox
         android:layout_marginTop="8dp"
         android:id="@+id/premium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/is_premium"/>
-    <!-- is Premium ? -->
+     is Premium ? -->
 
 
-    <CheckBox
-        android:id="@+id/terms"
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/terms_and_conditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I accept the Terms &amp; Conditions" />
+        android:textColor="#007cd4"
+        android:text="By clicking send I accept the Terms &amp; Conditions"
+        />
 
 
     <Button
@@ -393,7 +467,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/rounded_edittext"
-        android:text="Send"/>
+        android:text="Send"
+        android:textColor="#000000"
+        />
 
 
 

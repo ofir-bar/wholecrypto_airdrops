@@ -5,9 +5,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@drawable/main_toolbar_style"
-    app:layout_scrollFlags="scroll|enterAlways"
-    app:contentInsetEnd="0dp"
-    app:contentInsetStart="0dp"
     />
 

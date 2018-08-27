@@ -1,13 +1,16 @@
 package com.wholecrypto.airdrops;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -43,9 +46,9 @@ public class newAirdropForm extends AppCompatActivity {
 
     EditText restrictionsRef;
     EditText aboutRef;
+    EditText claimInstructionsRef;
 
-    CheckBox premiumRef;
-    CheckBox termsRef;
+
 
     //Variables
     String sentByPhone = MainActivity.currentUserPhone;
@@ -71,9 +74,9 @@ public class newAirdropForm extends AppCompatActivity {
 
     String restrictions;
     String about;
+    String claimInstructions;
 
     boolean isPremium;
-    boolean isTermsApproved;
 
 
     // Firebase instance variables
@@ -100,6 +103,20 @@ public class newAirdropForm extends AppCompatActivity {
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> projectCategoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.project_category, android.R.layout.simple_spinner_item);
+
+
+        projectCategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) view).setTextColor(Color.BLACK); //Change selected text color
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 // Specify the layout to use when the list of choices appears
         projectCategoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
@@ -107,10 +124,34 @@ public class newAirdropForm extends AppCompatActivity {
 
 
         Spinner kycOrWhitelistSpinner = findViewById(R.id.kycOrWhitelist);
+
+        //Changes the color of the selected item
+        kycOrWhitelistSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) view).setTextColor(Color.BLACK); //Change selected text color
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         ArrayAdapter<CharSequence> kycOrWhitelistAdapter = ArrayAdapter.createFromResource(this,
                 R.array.kyc_or_whitelist, android.R.layout.simple_spinner_item);
         kycOrWhitelistAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kycOrWhitelistSpinner.setAdapter(kycOrWhitelistAdapter);
+
+        TextView termsAndConditions = findViewById(R.id.terms_and_conditions);
+        termsAndConditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Hello",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
         Button submitAirdrop = findViewById(R.id.sendAirdrop);
         submitAirdrop.setOnClickListener(new View.OnClickListener() {
@@ -153,9 +194,7 @@ public class newAirdropForm extends AppCompatActivity {
 
         restrictionsRef = findViewById(R.id.restrictions);
         aboutRef = findViewById(R.id.about);
-
-        premiumRef = findViewById(R.id.premium);
-        termsRef = findViewById(R.id.terms);
+        claimInstructionsRef = findViewById(R.id.claim_instructions);
 
 
 
@@ -182,15 +221,14 @@ public class newAirdropForm extends AppCompatActivity {
 
         restrictions = restrictionsRef.getText().toString();
         about = aboutRef.getText().toString();
+        claimInstructions = claimInstructionsRef.getText().toString();
 
-        isPremium = premiumRef.isChecked();
-        isTermsApproved = termsRef.isChecked();
 
         if(checkFormLogicIsValid()){
 
 
             //Create the airdrop object
-            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,websiteURL,socialMedia,whitePaper,bounty,airdropForm,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,isPremium,isTermsApproved,sentByPhone,false);
+            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,websiteURL,socialMedia,whitePaper,bounty,airdropForm,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
 
             aAirdropsDatabaseReference.push().setValue(newAirdrop);//add a success listener
             Toast toast = (Toast.makeText(this,"Form Sent Successfully",Toast.LENGTH_SHORT));
@@ -247,12 +285,6 @@ public class newAirdropForm extends AppCompatActivity {
             return false;
         }
 
-        if (!isTermsApproved) {
-            Toast toast = (Toast.makeText(this, "You must accept the terms of service in order to publish airdrop", Toast.LENGTH_SHORT));
-            toast.show();
-            return false;
-        }
-
         return true;
     }
 
@@ -284,9 +316,7 @@ public class newAirdropForm extends AppCompatActivity {
 
         restrictionsRef.setText("");
         aboutRef.setText("");
-
-        premiumRef.setChecked(false);
-        termsRef.setChecked(false);
+        claimInstructionsRef.setText("");
     }
 
 
