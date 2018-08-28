@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.util.Linkify;
 import android.widget.TextView;
 
 public class DetailedAirdropActivity extends AppCompatActivity {
@@ -38,10 +39,12 @@ public class DetailedAirdropActivity extends AppCompatActivity {
         String endingDate =(String)getIntent().getExtras().get(EXTRA_ENDING_DATE);
         String tokensDistributed =(String)getIntent().getExtras().get(EXTRA_TOKENS_DISTRIBUTED);
         String pricePerToken =(String)getIntent().getExtras().get(EXTRA_PRICE_PER_TOKEN);
+
         String socialMedia =(String)getIntent().getExtras().get(EXTRA_SOCIAL_MEDIA);
+
         String claimInstructions =(String)getIntent().getExtras().get(EXTRA_CLAIM_INSTRUCTIONS);
 
-        toolbar.setTitle(projectNameAndSymbol);
+        getSupportActionBar().setTitle(projectNameAndSymbol);
 
         //populate the textViews with values from intent
 
@@ -56,6 +59,7 @@ public class DetailedAirdropActivity extends AppCompatActivity {
 
         TextView tv_about = findViewById(R.id.about);
         tv_about.setText(about);
+        Linkify.addLinks(tv_about,Linkify.WEB_URLS);
 
         TextView tv_startingDate = findViewById(R.id.start_date);
         tv_startingDate.setText(startingDate);
@@ -71,9 +75,12 @@ public class DetailedAirdropActivity extends AppCompatActivity {
 
         TextView tv_socialMedia = findViewById(R.id.social_media);
         tv_socialMedia.setText(socialMedia);
+        Linkify.addLinks(tv_socialMedia,Linkify.WEB_URLS);
+
 
         TextView tv_claimInstructions = findViewById(R.id.steps_to_claim);
         tv_claimInstructions.setText(claimInstructions);
+        Linkify.addLinks(tv_claimInstructions,Linkify.WEB_URLS);
 
 
     }

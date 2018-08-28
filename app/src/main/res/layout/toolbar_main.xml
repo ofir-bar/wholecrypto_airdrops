@@ -14,74 +14,54 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
-        <!-- my portfolio -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#ffffff"
+                android:id="@+id/main_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_toolbar_title"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_marginStart="4dp"
+                android:id="@+id/main_toolbar_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_toolbar_subtitle"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:textColor="#ffffff"
+                android:id="@+id/main_toolbar_title_beta_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/main_toolbar_beta_tag"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
+
         <TextView
-            android:id="@+id/my_portfolio"
+            android:textColor="#ffffff"
+            android:layout_marginTop="12dp"
+            android:id="@+id/main_toolbar_slogan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="@string/my_portfolio"
-            android:textSize="22sp"/>
-
-        <!-- Airdrops to do -->
-        <LinearLayout
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:id="@+id/airdrops_todo_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/airdrop_todo_title"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
-                android:textSize="22sp"/>
-
-
-            <TextView
-                android:id="@+id/airdrops_todo_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
-                android:textSize="22sp"/>
-        </LinearLayout>
-        <!-- Airdrops to do -->
-
-        <!-- airdrops done -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:id="@+id/airdrops_done_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/airdrop_done_title"
-                android:textSize="22sp"/>
-
-
-            <TextView
-                android:id="@+id/airdrops_done_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="2"
-                android:textSize="22sp"/>
-
-
-        </LinearLayout>
-        <!-- airdrops done -->
+            android:text="@string/main_toolbar_slogan"
+            android:textSize="18sp"/>
 
 
     </LinearLayout>

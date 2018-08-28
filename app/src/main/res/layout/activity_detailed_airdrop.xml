@@ -101,10 +101,6 @@
         <!-- Restrictions -->
 
         <!-- About -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/about_header"
@@ -112,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="About Project"
+                android:text="About Project:"
                 />
 
             <TextView
@@ -120,9 +116,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"/>
-        </LinearLayout>
-        <!-- About -->
+                android:layout_marginTop="8dp"/>
+                <!-- About -->
 
 
         <!-- Divider -->
@@ -238,11 +233,6 @@
         <!-- Divider -->
 
         <!-- Social Media -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
             <TextView
                 android:id="@+id/social_media_text"
                 android:layout_width="wrap_content"
@@ -251,14 +241,12 @@
                 android:layout_marginTop="16dp"
                 android:text="Social Media Links:"
                 />
-
             <TextView
                 android:id="@+id/social_media"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"/>
-        </LinearLayout>
         <!-- Social Media -->
 
         <!-- Divider -->
