@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,12 +24,8 @@ public class newAirdropForm extends AppCompatActivity {
     //Widgets
     EditText projectNameRef;
     Spinner projectCategoryRef;
-    EditText websiteURLRef;
 
-    EditText socialMediaRef;
-    EditText whitePaperRef;
-    EditText bountyRef;
-    EditText airdropFormRef;
+    EditText allLinksRef;
 
     EditText startDateRef;
     setDate startDateDialog;
@@ -55,12 +50,8 @@ public class newAirdropForm extends AppCompatActivity {
 
     String projectName;
     String projectCategory;
-    String websiteURL;
 
-    String socialMedia;
-    String whitePaper;
-    String bounty;
-    String airdropForm;
+    String allLinks;
 
     String startDate;
     String endDate;
@@ -147,8 +138,7 @@ public class newAirdropForm extends AppCompatActivity {
         termsAndConditions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Hello",Toast.LENGTH_SHORT).show();
-
+                //TODO add link here
             }
         });
 
@@ -175,12 +165,8 @@ public class newAirdropForm extends AppCompatActivity {
         //Widgets
         projectNameRef = findViewById(R.id.icoProjectName);
         projectCategoryRef = findViewById(R.id.projectCategory);
-        websiteURLRef = findViewById(R.id.websiteURL);
 
-        socialMediaRef = findViewById(R.id.socialMediaURL);
-        whitePaperRef = findViewById(R.id.whitepaperURL);
-        bountyRef = findViewById(R.id.bountyURL);
-        airdropFormRef = findViewById(R.id.airdropFormURL);
+        allLinksRef = findViewById(R.id.allLinksURL);
 
         startDateRef = findViewById(R.id.startDate);
         endDateRef = findViewById(R.id.endDate);
@@ -202,12 +188,8 @@ public class newAirdropForm extends AppCompatActivity {
         //Initialize the forms
         projectName = projectNameRef.getText().toString();
         projectCategory = projectCategoryRef.getSelectedItem().toString();
-        websiteURL = websiteURLRef.getText().toString();
 
-        socialMedia = socialMediaRef.getText().toString();
-        whitePaper = whitePaperRef.getText().toString();
-        bounty = bountyRef.getText().toString();
-        airdropForm = airdropFormRef.getText().toString();
+        allLinks = allLinksRef.getText().toString();
 
         startDate = startDateRef.getText().toString();
         endDate = endDateRef.getText().toString();
@@ -217,7 +199,7 @@ public class newAirdropForm extends AppCompatActivity {
         tokenDistributed = tokenDistributedRef.getText().toString();
         pricePerToken = pricePerTokenRef.getText().toString();
 
-       kycOrWhitelist = kycOrWhitelistRef.getSelectedItem().toString();
+        kycOrWhitelist = kycOrWhitelistRef.getSelectedItem().toString();
 
         restrictions = restrictionsRef.getText().toString();
         about = aboutRef.getText().toString();
@@ -228,7 +210,7 @@ public class newAirdropForm extends AppCompatActivity {
 
 
             //Create the airdrop object
-            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,websiteURL,socialMedia,whitePaper,bounty,airdropForm,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
+            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,allLinks,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
 
             aAirdropsDatabaseReference.push().setValue(newAirdrop);//add a success listener
             Toast toast = (Toast.makeText(this,"Form Sent Successfully",Toast.LENGTH_SHORT));
@@ -252,6 +234,14 @@ public class newAirdropForm extends AppCompatActivity {
             toast.show();
             return false;
         }
+
+        //Check if blank, or contain any unrelevant stuff
+        if (allLinks.isEmpty()) {
+            Toast toast = (Toast.makeText(this, "Airdrop links is empty", Toast.LENGTH_SHORT));
+            toast.show();
+            return false;
+        }
+
 
         if(startDate.isEmpty()){
             Toast toast = (Toast.makeText(this, "Starting Date is empty", Toast.LENGTH_SHORT));
@@ -278,9 +268,8 @@ public class newAirdropForm extends AppCompatActivity {
             return false;
         }
 
-        //check if description is more than 300 chars or is empty
-        if(about.length() > 300 || about.isEmpty()){
-            Toast toast = (Toast.makeText(this, "Description is empty or exceed 300 characters", Toast.LENGTH_SHORT));
+        if(about.length() > 1024 || about.isEmpty()){
+            Toast toast = (Toast.makeText(this, "About is empty or exceed 1024 characters", Toast.LENGTH_SHORT));
             toast.show();
             return false;
         }
@@ -296,12 +285,7 @@ public class newAirdropForm extends AppCompatActivity {
         projectCategoryRef.setVisibility(View.GONE);
         projectCategoryRef.setSelection(-1);
 
-        websiteURLRef.setText("");
-
-        socialMediaRef.setText("");
-        whitePaperRef.setText("");
-        bountyRef.setText("");
-        airdropFormRef.setText("");
+        allLinksRef.setText("");
 
         startDateRef.setText("");
         endDateRef.setText("");

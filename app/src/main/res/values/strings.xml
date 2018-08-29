@@ -108,12 +108,18 @@
     <string name="is_premium">Premium Airdrop?</string>
     <string name="ico_name">ICO Project name:</string>
 
-    <string name="website_url">Website URL:</string>
-    <string name="social_media_url">Social Media URLs:(for every link do line-break)</string>
-    <string name="white_paper_url">White Paper URL:</string>
-    <string name="bounty_url">Bounty URL:</string>
-    <string name="airdrop_form_url">Airdrop Form URL:</string>
-    <string name="country_of_operation">Country of Operation</string>
+    <string name="all_links">Link URLs:(for every link do a line-break)</string>
+    <string name="all_links_hint">
+        Website: www.mywebsite.com\n
+        White Paper:www.mywebsite.com/whitepaper\n
+        BitcoinTalk: www.bitcointalk.org\n
+        Telegram: t.me/OurTelegram\n
+        Our Bounty: www.mywebsite.com/bounty\n
+        Blog: www.mywebsite.com/blog
+        Facebook: www.facebook.com/ourproject
+    </string>
+
+    <string name="country_of_operation">Country of Operation</string> <!-- TODO: // NEED TO ADD THIS PART -->
     <string name="project_category">Project Category:</string>
     <string name="airdrop_dates">Airdrop Dates:</string>
     <string name="token_symbol">Token Symbol</string>
@@ -123,6 +129,18 @@
     <string name="kyc_or_whitelist">KYC or Whitelist?</string>
     <string name="restrictions">Any restrictions in who can participate?</string>
     <string name="about">Tell about your project</string>
+    <string name="about_hint">Bitcoin is a consensus network that enables a new payment system and a completely\n
+        digital money. It is the first decentralized peer-to-peer payment network that is\n
+        powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much\n
+        like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry\n
+        bookkeeping system in existence.</string>
+    <string name="claim_instructions">How to claim the airdrop:</string>
+    <string name="claim_instructions_hint">
+        1. Join our telegram group at: t.me/OurTelegram\n
+        2. Fill out this online form on our website: www.mywebsite.com/online-form\n
+        3. Like us on facebook: www.facebook.com/ourproject
+    </string>
+
     <string-array name="project_category">
 
         <item> Finance </item>

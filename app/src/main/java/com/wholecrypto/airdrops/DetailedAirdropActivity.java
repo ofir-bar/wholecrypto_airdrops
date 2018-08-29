@@ -17,7 +17,7 @@ public class DetailedAirdropActivity extends AppCompatActivity {
     public static final String EXTRA_ENDING_DATE = "endingDate";
     public static final String EXTRA_TOKENS_DISTRIBUTED = "tokensDistributed";
     public static final String EXTRA_PRICE_PER_TOKEN = "pricePerToken";
-    public static final String EXTRA_SOCIAL_MEDIA = "socialMedia";
+    public static final String EXTRA_ALL_LINKS_URL = "allLinksURL";
     public static final String EXTRA_CLAIM_INSTRUCTIONS = "claimInstructions";
 
     @Override
@@ -40,7 +40,7 @@ public class DetailedAirdropActivity extends AppCompatActivity {
         String tokensDistributed =(String)getIntent().getExtras().get(EXTRA_TOKENS_DISTRIBUTED);
         String pricePerToken =(String)getIntent().getExtras().get(EXTRA_PRICE_PER_TOKEN);
 
-        String socialMedia =(String)getIntent().getExtras().get(EXTRA_SOCIAL_MEDIA);
+        String socialMedia =(String)getIntent().getExtras().get(EXTRA_ALL_LINKS_URL);
 
         String claimInstructions =(String)getIntent().getExtras().get(EXTRA_CLAIM_INSTRUCTIONS);
 

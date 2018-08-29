@@ -56,7 +56,7 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
                 intent.putExtra(DetailedAirdropActivity.EXTRA_ENDING_DATE, airdrop.getEndDate());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_TOKENS_DISTRIBUTED, airdrop.getTokensDistribute());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_PRICE_PER_TOKEN, airdrop.getPricePerToken());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_SOCIAL_MEDIA, airdrop.getSocialMediaURL());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_ALL_LINKS_URL, airdrop.getAllLinksURL());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_CLAIM_INSTRUCTIONS, airdrop.getClaimInstructions());
 
 

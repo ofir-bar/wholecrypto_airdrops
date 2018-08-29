@@ -82,28 +82,6 @@
     <!-- Project Category -->
 
 
-    <!-- Website URL -->
-        <TextView
-            android:layout_gravity="center"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="8dp"
-            android:id="@+id/websiteURLHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/website_url"/>
-
-        <EditText
-            android:background="@drawable/rounded_edittext"
-            android:layout_gravity="center"
-            android:id="@+id/websiteURL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:inputType="textUri" />
-    <!-- Website URL -->
-
-
     <!-- Social Media URLs -->
     <TextView
         android:layout_gravity="center"
@@ -112,87 +90,21 @@
             android:id="@+id/socialMediaURLHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/social_media_url" />
+            android:text="@string/all_links" />
 
         <EditText
+            android:hint="@string/all_links_hint"
             android:background="@drawable/rounded_edittext"
             android:layout_gravity="center"
-            android:id="@+id/socialMediaURL"
+            android:id="@+id/allLinksURL"
+            android:gravity="start|top"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:ems="10"
-            android:inputType="textMultiLine"
-            android:textColor="#000000" />
-
+            android:inputType="textImeMultiLine"
+            android:textColor="#000000"
+            android:textColorHint="@color/subtext"/>
     <!-- Social Media URLs -->
-
-
-    <!-- White Paper URL -->
-    <TextView
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:id="@+id/whitepaperURLHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/white_paper_url"/>
-
-        <EditText
-            android:background="@drawable/rounded_edittext"
-            android:layout_gravity="center"
-            android:id="@+id/whitepaperURL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textUri"
-            android:textColor="#000000"/>
-    <!-- White Paper URL -->
-
-
-    <!-- Bounty URL -->
-    <TextView
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:id="@+id/bountyURLHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bounty_url"/>
-
-        <EditText
-            android:background="@drawable/rounded_edittext"
-            android:layout_gravity="center"
-            android:id="@+id/bountyURL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textUri"
-            android:textColor="#000000"
-            />
-    <!-- Bounty URL -->
-
-
-    <!-- Airdrop Form URL -->
-    <TextView
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/airdropFormURLHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/airdrop_form_url"/>
-
-        <EditText
-            android:background="@drawable/rounded_edittext"
-            android:layout_gravity="center"
-            android:id="@+id/airdropFormURL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textUri"
-            android:textColor="#000000"
-            />
-    <!-- Airdrop Form URL -->
 
 
     <!-- Airdrop Dates -->
@@ -410,20 +322,22 @@
         android:layout_height="150dp"
         android:inputType="textMultiLine"
         android:textColor="#000000"
+        android:hint="@string/about_hint"
+        android:textColorHint="@color/subtext"
         />
     <!-- About -->
 
 
 
-    <!-- About Header -->
+    <!-- Claim Instructions Header -->
     <TextView
         android:layout_marginTop="24dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/claim_instructionsHeader"
-        android:text="How to claim the airdrop:"/>
-    <!-- About Header -->
+        android:text="@string/claim_instructions"/>
+    <!-- Claim Instructions Header -->
 
 
     <!-- Claim Instructions -->
@@ -436,6 +350,8 @@
         android:layout_height="150dp"
         android:inputType="textMultiLine"
         android:textColor="#000000"
+        android:hint="@string/claim_instructions_hint"
+        android:textColorHint="@color/subtext"
         />
     <!-- Claim Instructions -->
 
@@ -457,11 +373,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#007cd4"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:text="By clicking send I accept the Terms &amp; Conditions"
         />
 
 
     <Button
+        android:layout_marginTop="16dp"
         android:id="@+id/sendAirdrop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

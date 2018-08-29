@@ -6,11 +6,7 @@ public class Airdrop {
 
     private String projectName;
     private String projectCategory;
-    private String websiteURL;
-    private String socialMediaURL;
-    private String whitePaperURL;
-    private String bountyURL;
-    private String airdropFormURL;
+    private String allLinksURL;
     private String startDate;
     private String endDate;
     private String tokenSymbol;
@@ -27,14 +23,10 @@ public class Airdrop {
 
 
 
-    public Airdrop(String projectName, String projectCategory, String websiteURL, String socialMediaURL, String whitePaperURL, String bountyURL, String airdropFormURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
+    public Airdrop(String projectName, String projectCategory, String allLinksURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
         this.projectName = projectName;
         this.projectCategory = projectCategory;
-        this.websiteURL = websiteURL;
-        this.socialMediaURL = socialMediaURL;
-        this.whitePaperURL = whitePaperURL;
-        this.bountyURL = bountyURL;
-        this.airdropFormURL = airdropFormURL;
+        this.allLinksURL = allLinksURL;
         this.startDate = startDate;
         this.endDate = endDate;
         this.tokenSymbol = tokenSymbol;
@@ -61,24 +53,8 @@ public class Airdrop {
         return projectCategory;
     }
 
-    public String getWebsiteURL() {
-        return websiteURL;
-    }
-
-    public String getSocialMediaURL() {
-        return socialMediaURL;
-    }
-
-    public String getWhitePaperURL() {
-        return whitePaperURL;
-    }
-
-    public String getBountyURL() {
-        return bountyURL;
-    }
-
-    public String getAirdropFormURL() {
-        return airdropFormURL;
+    public String getAllLinksURL() {
+        return allLinksURL;
     }
 
     public String getStartDate() {
