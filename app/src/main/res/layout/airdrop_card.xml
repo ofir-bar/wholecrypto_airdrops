@@ -18,6 +18,7 @@
     android:layout_height="match_parent">
 
 
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="56dp"
@@ -106,12 +107,20 @@
         android:id="@+id/worth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:text="@string/data_unavailable"
         android:textColor="#1db954"
-        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintEnd_toStartOf="@+id/dollar_sign"
         card_view:layout_constraintTop_toTopOf="@+id/worth_text" />
 
+    <TextView
+        android:id="@+id/dollar_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="$"
+        android:textColor="#1db954"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toTopOf="@+id/worth" />
 
 </android.support.constraint.ConstraintLayout>
 

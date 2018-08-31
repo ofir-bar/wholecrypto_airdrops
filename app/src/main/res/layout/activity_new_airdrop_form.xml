@@ -12,35 +12,72 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/header"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp">
+
+
+        <!-- contat email -->
+        <TextView
+
+            android:id="@+id/contact_email_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_email" />
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:id="@+id/contact_email_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_form_header" />
-    <!-- Header -->
+        android:ems="10"
+        android:inputType="textEmailAddress"/>
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/note_header"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/note_header" />
-    <!-- Header -->
 
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp">
 
 
     <!-- ICO Project name ? -->
     <TextView
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
+
             android:id="@+id/icoProjectNameHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ico_name" />
+
+    <TextView
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:text="*"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
 
         <EditText
             android:background="@drawable/rounded_edittext"
@@ -81,16 +118,31 @@
     </LinearLayout>
     <!-- Project Category -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp">
+
 
     <!-- Social Media URLs -->
     <TextView
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
             android:id="@+id/socialMediaURLHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/all_links" />
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
         <EditText
             android:hint="@string/all_links_hint"
@@ -107,14 +159,32 @@
     <!-- Social Media URLs -->
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="8dp">
+
+
     <!-- Airdrop Dates -->
     <TextView
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
         android:id="@+id/airdropDateHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/airdrop_dates"/>
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -151,14 +221,30 @@
     <!-- Airdrop Dates -->
 
     <!-- Token Symbol -->
-    <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="8dp">
+
+    <TextView
         android:id="@+id/tokenSymbolHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/token_symbol" />
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <EditText
         android:background="@drawable/rounded_edittext"
@@ -170,35 +256,10 @@
         android:inputType="textCapCharacters"
         android:textAllCaps="true"
         android:textColor="#000000"
+        android:textColorHint="@color/subtext"
+        android:hint="@string/token_symbol_hint"
         />
     <!-- Token Symbol -->
-
-
-
-    <!-- Platform Type -->
-    <TextView
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/projectPlatformHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/project_platform"/>
-
-    <EditText
-        android:background="@drawable/rounded_edittext"
-        android:layout_gravity="center"
-        android:id="@+id/projectPlatform"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:textColor="#000000"
-        />
-    <!-- Platform Type -->
-
-
-
 
 
     <!-- Token distributed Amount -->
@@ -221,6 +282,8 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:textColor="#000000"
+            android:textColorHint="@color/subtext"
+            android:hint="@string/token_amount_hint"
             />
     <!-- Token distributed Amount -->
 
@@ -246,6 +309,8 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:textColor="#000000"
+        android:textColorHint="@color/subtext"
+        android:hint="@string/price_per_token_hint"
         />
     <!-- Price Per Token -->
 
@@ -299,6 +364,8 @@
             android:background="@drawable/rounded_edittext"
             android:ems="10"
             android:textColor="#000000"
+            android:textColorHint="@color/subtext"
+            android:hint="@string/restrictions_hint"
             />
     <!-- Restrictions -->
 

@@ -8,28 +8,35 @@
             android:id="@+id/nav_airdrops"
             android:title="@string/nav_airdrops"
             android:checked="true"
-            android:icon="@drawable/ic_airdrops" />
+            android:icon="@drawable/ic_airdrops"/>
 
 
-        <item
-            android:id="@+id/nav_portfolio"
-            android:title="@string/nav_my_portfolio"
-            android:icon="@drawable/ic_profile" />
-
-                <item
-                    android:id="@+id/nav_list_airdrop"
-                    android:title="@string/nav_list_airdrop"
-                    android:icon="@drawable/ic_list_airdrop" />
 
                 <item
                     android:id="@+id/nav_faq"
                     android:title="@string/nav_faq"
-                    android:icon="@drawable/ic_faq" />
+                    android:icon="@drawable/ic_faq"
+                    android:checkable="false"/>
+<!--
+        <item
+            android:id="@+id/nav_portfolio"
+            android:title="@string/nav_my_portfolio"
+            android:icon="@drawable/ic_profile"
+            android:checkable="false"/>
+
+                <item
+                android:id="@+id/nav_notifications"
+                android:title="@string/nav_notifications"
+                android:icon="@drawable/ic_notifications_on"
+                android:checkable="false"/>
 
                 <item
                     android:id="@+id/nav_block_ads"
                     android:title="@string/nav_block_ads"
-                    android:icon="@drawable/ic_block_ads" />
+                    android:icon="@drawable/ic_block_ads"
+                    android:checkable="false"/>
+
+                    -->
 
     </group>
 
@@ -38,9 +45,11 @@
         android:checkableBehavior="none">
 
         <item
-            android:id="@+id/nav_notifications"
-            android:title="@string/nav_notifications"
-            android:icon="@drawable/ic_notifications_on"/>
+            android:id="@+id/nav_list_airdrop"
+            android:title="@string/nav_list_airdrop"
+            android:icon="@drawable/ic_list_airdrop"
+            android:checkable="false"/>
+
 
     </group>
 
@@ -50,9 +59,16 @@
                 android:checkableBehavior="none">
 
                 <item
+                    android:id="@+id/nav_terms_of_service"
+                    android:title="@string/nav_terms_of_service"
+                    android:icon="@drawable/ic_terms_of_service"
+                    android:checkable="false"/>
+
+                <item
                     android:id="@+id/nav_logout"
                     android:title="@string/nav_logout"
-                    android:icon="@drawable/ic_logout"/>
+                    android:icon="@drawable/ic_logout"
+                    android:checkable="false"/>
 
             </group>
 

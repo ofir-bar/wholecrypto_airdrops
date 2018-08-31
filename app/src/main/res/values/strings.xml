@@ -19,7 +19,6 @@
     <!-- Toolbar -->
 
 
-
     <!-- Main Activity -->
 
 
@@ -50,6 +49,13 @@
     <string name="app_ads_body">We have made sure that ads in our app be with as little distraction as possible.\nIn the current version you can\'t disable ads,you will, however, be able to disable ads entirely in future releases</string>
 
     <!--FAQ Airdrops -->
+
+
+    <!-- Terms Of Service -->
+
+    <string name="terms_of_service_title">Terms Of Service</string>
+
+    <!-- Terms Of Service -->
 
 
     <!--
@@ -103,10 +109,11 @@
 
 
     <!-- Airdrop Registration Fragment -->
+    <string name="contact_email">Email for Contact</string>
     <string name="new_form_header">If you don\'t know some form, leave it blank</string>
     <string name="note_header">Please note: do not close the app while editing this form, it will erase your data.</string>
     <string name="is_premium">Premium Airdrop?</string>
-    <string name="ico_name">ICO Project name:</string>
+    <string name="ico_name">Project name:</string>
 
     <string name="all_links">Link URLs:(for every link do a line-break)</string>
     <string name="all_links_hint">
@@ -123,12 +130,19 @@
     <string name="project_category">Project Category:</string>
     <string name="airdrop_dates">Airdrop Dates:</string>
     <string name="token_symbol">Token Symbol</string>
-    <string name="project_platform">Platform or Token Type (e.g. Ethereum, ERC20)</string>
-    <string name="token_amount">Tokens Distributed (e.g. 50 NEW) </string>
-    <string name="price_per_token">Price per token in USD (e.g. 1 NEW = 0.1$)  </string>
+    <string name="token_symbol_hint">i.e. SHIP,ETH,EOS,BTC</string>
+
+    <string name="blockchain_platform">Associated Blockchain Platform</string> <!-- TODO: // NEED TO ADD THIS PART -->
+
+    <string name="token_amount">Tokens Distributed in Airdrop</string>
+    <string name="token_amount_hint">50(EOS)</string>
+    <string name="price_per_token">Price per 1 token in USD (e.g. 1 NEW = 0.1$)  </string>
+    <string name="price_per_token_hint">(e.g. 1 NEW = 0.1$)</string>
     <string name="kyc_or_whitelist">KYC or Whitelist?</string>
     <string name="restrictions">Any restrictions in who can participate?</string>
+    <string name="restrictions_hint">e.g. USA Citizens only</string>
     <string name="about">Tell about your project</string>
+
     <string name="about_hint">Bitcoin is a consensus network that enables a new payment system and a completely\n
         digital money. It is the first decentralized peer-to-peer payment network that is\n
         powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much\n
@@ -181,6 +195,8 @@
         <item>KYC only</item>
         <item>Whitelist only</item>
     </string-array>
+
+
     <!-- Airdrop Registration Fragment -->
 
     <!-- Active Airdrops Fragment -->
@@ -193,19 +209,11 @@
     <!-- Upcoming Airdrops Fragment -->
 
 
-    <!-- Past Airdrops Fragment -->
-    <string name="past_airdrops">Past Airdrops</string>
-    <!-- Past Airdrops Fragment -->
-
-
-
-
     <!--
     **********
     End of Fragments
     **********
     -->
-
 
 
     <!--
@@ -223,6 +231,7 @@
     <string name="nav_notifications">Notifications</string>
     <string name="nav_category_contact">Contact</string>
     <string name="nav_contact">Contact Us</string>
+    <string name="nav_terms_of_service">Terms of Service</string>
     <string name="nav_logout">Log Out</string>
 
     <!-- Required Strings for the navigation drawer. used for accessibility and add the hamburger icon -->

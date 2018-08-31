@@ -10,7 +10,6 @@ public class Airdrop {
     private String startDate;
     private String endDate;
     private String tokenSymbol;
-    private String platform;
     private String tokensDistribute;
     private String pricePerToken;
     private String kycOrWhitelist;
@@ -23,14 +22,13 @@ public class Airdrop {
 
 
 
-    public Airdrop(String projectName, String projectCategory, String allLinksURL, String startDate, String endDate, String tokenSymbol, String platform, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
+    public Airdrop(String projectName, String projectCategory, String allLinksURL, String startDate, String endDate, String tokenSymbol, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
         this.projectName = projectName;
         this.projectCategory = projectCategory;
         this.allLinksURL = allLinksURL;
         this.startDate = startDate;
         this.endDate = endDate;
         this.tokenSymbol = tokenSymbol;
-        this.platform = platform;
         this.tokensDistribute = tokensDistribute;
         this.pricePerToken = pricePerToken;
         this.kycOrWhitelist = kycOrWhitelist;
@@ -67,10 +65,6 @@ public class Airdrop {
 
     public String getTokenSymbol() {
         return tokenSymbol;
-    }
-
-    public String getPlatform() {
-        return platform;
     }
 
     public String getTokensDistribute() {

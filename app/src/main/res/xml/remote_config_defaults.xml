@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>loading_terms_of_service</key>
+        <value>Loading Terms of service...</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

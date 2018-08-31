@@ -3,7 +3,7 @@
     package="com.wholecrypto.airdrops">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -26,8 +26,11 @@
             android:name=".FaqActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SalesMainPageActivity" />
-        <activity android:name=".newAirdropForm"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".newAirdropForm"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".TermsOfServiceActivity"/>
+
     </application>
 
 </manifest>

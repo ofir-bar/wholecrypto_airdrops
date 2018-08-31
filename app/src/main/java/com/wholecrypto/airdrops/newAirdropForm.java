@@ -1,5 +1,6 @@
 package com.wholecrypto.airdrops;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,7 +34,6 @@ public class newAirdropForm extends AppCompatActivity {
     setDate endDateDialog;
 
     EditText tokenSymbolRef;
-    EditText platformRef; //e.g. 'ERC20' or 'Ethereum'
     EditText tokenDistributedRef;
     EditText pricePerTokenRef;
 
@@ -57,7 +57,6 @@ public class newAirdropForm extends AppCompatActivity {
     String endDate;
 
     String tokenSymbol;
-    String platform;
     String tokenDistributed;
     String pricePerToken;
 
@@ -138,7 +137,8 @@ public class newAirdropForm extends AppCompatActivity {
         termsAndConditions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO add link here
+                Intent listItemIntent = new Intent(getBaseContext(),TermsOfServiceActivity.class);
+                startActivity(listItemIntent);
             }
         });
 
@@ -172,7 +172,6 @@ public class newAirdropForm extends AppCompatActivity {
         endDateRef = findViewById(R.id.endDate);
 
         tokenSymbolRef = findViewById(R.id.tokenSymbol);
-        platformRef = findViewById(R.id.projectPlatform); //e.g. 'ERC20' or 'Ethereum'
         tokenDistributedRef = findViewById(R.id.tokensDistributed);
         pricePerTokenRef = findViewById(R.id.pricePerToken);
 
@@ -195,7 +194,6 @@ public class newAirdropForm extends AppCompatActivity {
         endDate = endDateRef.getText().toString();
 
         tokenSymbol = tokenSymbolRef.getText().toString();
-        platform = platformRef.getText().toString(); //e.g. 'ERC20' or 'Ethereum'
         tokenDistributed = tokenDistributedRef.getText().toString();
         pricePerToken = pricePerTokenRef.getText().toString();
 
@@ -210,7 +208,7 @@ public class newAirdropForm extends AppCompatActivity {
 
 
             //Create the airdrop object
-            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,allLinks,startDate,endDate,tokenSymbol,platform,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
+            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,allLinks,startDate,endDate,tokenSymbol,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
 
             aAirdropsDatabaseReference.push().setValue(newAirdrop);//add a success listener
             Toast toast = (Toast.makeText(this,"Form Sent Successfully",Toast.LENGTH_SHORT));
@@ -291,7 +289,6 @@ public class newAirdropForm extends AppCompatActivity {
         endDateRef.setText("");
 
         tokenSymbolRef.setText("");
-        platformRef.setText("");
         tokenDistributedRef.setText("");
         pricePerTokenRef.setText("");
 

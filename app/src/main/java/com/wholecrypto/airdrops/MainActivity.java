@@ -127,20 +127,25 @@ public class MainActivity extends AppCompatActivity implements
                 listItemIntent = new Intent(this,SalesMainPageActivity.class);
                 break;
 
-            case R.id.nav_portfolio:
-                Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
-                break;
-
             case R.id.nav_faq:
                 listItemIntent = new Intent(this,FaqActivity.class);
                 break;
 
+/*
+            case R.id.nav_portfolio:
+                Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
+                return true;
+
             case R.id.nav_block_ads:
                 Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
-                break;
+                return true;
 
             case R.id.nav_notifications:
                 Toast.makeText(this,R.string.version_unavailable,Toast.LENGTH_SHORT).show();
+                return true;
+*/
+            case R.id.nav_terms_of_service:
+                listItemIntent = new Intent(this,TermsOfServiceActivity.class);
                 break;
 
             case R.id.nav_logout:
@@ -160,12 +165,7 @@ public class MainActivity extends AppCompatActivity implements
             navChosenFragment.commit();
         }
         else {
-            if(listItemIntent != null){
                 startActivity(listItemIntent);
-            }
-            else {
-                Toast.makeText(this,"Unavailable in this version", Toast.LENGTH_SHORT).show();
-            }
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -219,8 +219,8 @@ public class MainActivity extends AppCompatActivity implements
 
         pager.setAdapter(pagerAdapter);
 
-        TabLayout tabLayout = findViewById(R.id.tab_dots);
-        tabLayout.setupWithViewPager(pager, true);
+        //TabLayout tabLayout = findViewById(R.id.tab_dots);
+        //tabLayout.setupWithViewPager(pager, true);
 
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements
 
         @Override
         public int getCount(){
-            return 3;
+            return 1;
         }
 
         @Override
@@ -272,10 +272,9 @@ public class MainActivity extends AppCompatActivity implements
             switch (position){
                 case 0:
                     return new ActiveListFragment();
-                case 1:
+                /*case 1:
                     return new UpcomingListFragment();
-                case 2:
-                    return new PastListFragment();
+                    */
             }
             return null;
         }
@@ -305,9 +304,7 @@ public class MainActivity extends AppCompatActivity implements
                                     .setPrivacyPolicyUrl("https://superapp.example.com/privacy-policy.html")
                                     .setIsSmartLockEnabled(false)
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.PhoneBuilder().build(),
-                                            new AuthUI.IdpConfig.GoogleBuilder().build(),
-                                            new AuthUI.IdpConfig.EmailBuilder().build())
+                                            new AuthUI.IdpConfig.PhoneBuilder().build())
                                     )
                                     .build(),
                             RC_SIGN_IN);
