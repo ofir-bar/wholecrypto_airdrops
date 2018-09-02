@@ -2,27 +2,31 @@ package com.wholecrypto.airdrops;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 public class newAirdropForm extends AppCompatActivity {
+    private static final String TAG = "newAirdropForm";
+    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlSK6gQ3UUteF+LI3cOSoDaF9WfKTUPYn9vvzoaTaXBbYDjKENTqFv9bcjipjPcq7UuoPa4B13iLhqQbgGDUQhr4XrYa6vRcPP89qZL0jW2d1aLjylcjlge1aq7DFRKdB4BVWf3uPKCW+vf0gKG4Sss0wzYxkI6j0t0Zy5jlakrEHAmNAOAE3BzYtPBt4M/sUrIRh9zSiWmBELzvsR/fLmOfH+fdmyn1l6K8tD6r/kH/UKuyQdgbqlWUMyz0RkUKABs6ubHYq9v+pp+2kPT5DxmN7O30SwBf8mpB5UOIOyGGIz9ll7ezuXmsBQsGf5oRiWnfmiH9EjZI6jgT7PbexxwIDAQAB";
 
-
-    //References
 
 
     //Widgets
+    EditText contactEmailRef;
     EditText projectNameRef;
     Spinner projectCategoryRef;
 
@@ -42,11 +46,13 @@ public class newAirdropForm extends AppCompatActivity {
     EditText restrictionsRef;
     EditText aboutRef;
     EditText claimInstructionsRef;
+    CheckBox contactCheckboxRef;
 
 
 
     //Variables
     String sentByPhone = MainActivity.currentUserPhone;
+    String contactEmail;
 
     String projectName;
     String projectCategory;
@@ -65,6 +71,7 @@ public class newAirdropForm extends AppCompatActivity {
     String restrictions;
     String about;
     String claimInstructions;
+    boolean contact_checkbox;
 
     boolean isPremium;
 
@@ -81,7 +88,6 @@ public class newAirdropForm extends AppCompatActivity {
 
         aFirebaseDatabase = FirebaseDatabase.getInstance();
         aAirdropsDatabaseReference= aFirebaseDatabase.getReference().child("airdrops");
-
 
         startDateRef = findViewById(R.id.startDate);
         endDateRef = findViewById(R.id.endDate);
@@ -147,7 +153,6 @@ public class newAirdropForm extends AppCompatActivity {
         submitAirdrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createAirdrop();
             }
         });
 
@@ -163,6 +168,7 @@ public class newAirdropForm extends AppCompatActivity {
     private void createAirdrop(){
 
         //Widgets
+        contactEmailRef = findViewById(R.id.contact_email_box);
         projectNameRef = findViewById(R.id.icoProjectName);
         projectCategoryRef = findViewById(R.id.projectCategory);
 
@@ -180,11 +186,13 @@ public class newAirdropForm extends AppCompatActivity {
         restrictionsRef = findViewById(R.id.restrictions);
         aboutRef = findViewById(R.id.about);
         claimInstructionsRef = findViewById(R.id.claim_instructions);
+        contactCheckboxRef = findViewById(R.id.contact_checkbox);
 
 
 
 
         //Initialize the forms
+        contactEmail = contactEmailRef.getText().toString();
         projectName = projectNameRef.getText().toString();
         projectCategory = projectCategoryRef.getSelectedItem().toString();
 
@@ -202,6 +210,7 @@ public class newAirdropForm extends AppCompatActivity {
         restrictions = restrictionsRef.getText().toString();
         about = aboutRef.getText().toString();
         claimInstructions = claimInstructionsRef.getText().toString();
+        contact_checkbox = contactCheckboxRef.isChecked();
 
 
         if(checkFormLogicIsValid()){
@@ -225,53 +234,58 @@ public class newAirdropForm extends AppCompatActivity {
 //Check logic for mandatory fields
     private boolean checkFormLogicIsValid() {
 
-
+/*
         //Check if blank, or contain any unrelevant stuff
+
+        if (contactEmail.isEmpty()) {
+            Toast.makeText(this, "Contact email empty", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         if (projectName.isEmpty()) {
-            Toast toast = (Toast.makeText(this, "Project Name is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Project Name is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         //Check if blank, or contain any unrelevant stuff
         if (allLinks.isEmpty()) {
-            Toast toast = (Toast.makeText(this, "Airdrop links is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Airdrop links is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
 
         if(startDate.isEmpty()){
-            Toast toast = (Toast.makeText(this, "Starting Date is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Starting Date is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (tokenSymbol.isEmpty()) {
-            Toast toast = (Toast.makeText(this, "Token Symbol is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Token Symbol is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
 
         if (tokenDistributed.isEmpty()) {
-            Toast toast = (Toast.makeText(this, "Tokens distributed amount is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Tokens distributed amount is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if(pricePerToken.isEmpty()){
-            Toast toast = (Toast.makeText(this, "Price per token is empty", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "Price per token is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if(about.length() > 1024 || about.isEmpty()){
-            Toast toast = (Toast.makeText(this, "About is empty or exceed 1024 characters", Toast.LENGTH_SHORT));
-            toast.show();
+            Toast.makeText(this, "About is empty or exceed 1024 characters", Toast.LENGTH_SHORT).show();
             return false;
         }
 
+        if(!contact_checkbox){
+            Toast.makeText(this, "Contact Checkbox is not checked", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+*/
         return true;
     }
 
@@ -279,6 +293,7 @@ public class newAirdropForm extends AppCompatActivity {
 
     private void clearForm(){
 
+        contactEmailRef.setText("");
         projectNameRef.setText("");
         projectCategoryRef.setVisibility(View.GONE);
         projectCategoryRef.setSelection(-1);
@@ -298,10 +313,7 @@ public class newAirdropForm extends AppCompatActivity {
         restrictionsRef.setText("");
         aboutRef.setText("");
         claimInstructionsRef.setText("");
+        contactCheckboxRef.setChecked(false);
     }
-
-
-
-
 
 }

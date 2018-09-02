@@ -7,8 +7,8 @@ android {
         applicationId "com.wholecrypto.airdrops"
         minSdkVersion 17
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -44,11 +44,6 @@ dependencies {
     //External Libraries
     implementation 'com.github.ybq:Android-SpinKit:1.1.0' // Custom Loading Animation
     implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.github.mukeshsolanki:country-picker-android:1.2.4'
-
-    //Google Recaptcha
-    implementation 'com.google.android.gms:play-services-safetynet:15.0.1'
-
 
 }
 

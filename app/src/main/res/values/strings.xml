@@ -70,18 +70,6 @@
     Fragments
     **********
     -->
-
-    <!-- Publish Airdrop Fragment -->
-    <string name="publish_airdrop_title">Publish New Airdrop</string>
-    <string name="coin_name">Coin Name(e.g. Bitcoin)</string>
-    <string name="coin_symbol">Coin Symbol(e.g. BTC)</string>
-    <string name="airdrop_starting_date">Starting Date</string>
-    <string name="airdrop_ending_date">Ending Date</string>
-    <string name="airdrop_description_title">Airdrop Description</string>
-    <string name="airdrop_description_hint">Join telegram, submit your code and complete an online form. Join here: "https://www.thisisasamplelink55.com"</string>
-    <string name="airdrop_reward">Reward(e.g. 0.5 BTC)</string>
-    <!-- Publish Airdrop Fragment -->
-
     <!-- Sales Page Fragment  -->
     <string name="exposure_fragment_title">Exposure</string>
     <string name="exposure_fragment_body">Reach out to thousands of <b>global</b> users</string>
@@ -109,13 +97,11 @@
 
 
     <!-- Airdrop Registration Fragment -->
-    <string name="contact_email">Email for Contact</string>
-    <string name="new_form_header">If you don\'t know some form, leave it blank</string>
-    <string name="note_header">Please note: do not close the app while editing this form, it will erase your data.</string>
+    <string name="contact_email">Email for Contact - <b>We will contact you before your airdrop is published</b></string>
     <string name="is_premium">Premium Airdrop?</string>
-    <string name="ico_name">Project name:</string>
+    <string name="ico_name">Project Name:</string>
 
-    <string name="all_links">Link URLs:(for every link do a line-break)</string>
+    <string name="all_links">Links for Social Media and more:(for every link, start on a new line)</string>
     <string name="all_links_hint">
         Website: www.mywebsite.com\n
         White Paper:www.mywebsite.com/whitepaper\n
@@ -128,15 +114,15 @@
 
     <string name="country_of_operation">Country of Operation</string> <!-- TODO: // NEED TO ADD THIS PART -->
     <string name="project_category">Project Category:</string>
-    <string name="airdrop_dates">Airdrop Dates:</string>
+    <string name="airdrop_dates">Airdrop start/end Dates:</string>
     <string name="token_symbol">Token Symbol</string>
     <string name="token_symbol_hint">i.e. SHIP,ETH,EOS,BTC</string>
 
     <string name="blockchain_platform">Associated Blockchain Platform</string> <!-- TODO: // NEED TO ADD THIS PART -->
 
-    <string name="token_amount">Tokens Distributed in Airdrop</string>
-    <string name="token_amount_hint">50(EOS)</string>
-    <string name="price_per_token">Price per 1 token in USD (e.g. 1 NEW = 0.1$)  </string>
+    <string name="token_amount">How many of your tokens will you distribute?</string>
+    <string name="token_amount_hint">50(NEW)</string>
+    <string name="price_per_token">How much 1 token of your worth in USD?</string>
     <string name="price_per_token_hint">(e.g. 1 NEW = 0.1$)</string>
     <string name="kyc_or_whitelist">KYC or Whitelist?</string>
     <string name="restrictions">Any restrictions in who can participate?</string>
@@ -148,7 +134,7 @@
         powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much\n
         like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry\n
         bookkeeping system in existence.</string>
-    <string name="claim_instructions">How to claim the airdrop:</string>
+    <string name="claim_instructions">How to join your airdrop?</string>
     <string name="claim_instructions_hint">
         1. Join our telegram group at: t.me/OurTelegram\n
         2. Fill out this online form on our website: www.mywebsite.com/online-form\n
@@ -195,6 +181,10 @@
         <item>KYC only</item>
         <item>Whitelist only</item>
     </string-array>
+
+    <string name="airdrop_starting_date">Starting Date</string>
+    <string name="airdrop_ending_date">Ending Date</string>
+    <string name="contact_text">I understand that this form is not final, and I will be contacted by email to finish the publish process </string>
 
 
     <!-- Airdrop Registration Fragment -->

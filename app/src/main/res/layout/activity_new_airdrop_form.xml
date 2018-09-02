@@ -29,7 +29,7 @@
             android:id="@+id/contact_email_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/contact_email" />
+            android:text="@string/contact_email"/>
 
         <TextView
             android:textColor="#ff0000"
@@ -48,7 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:hint="example@email.com"
+        android:textColorHint="@color/subtext"
+        />
 
 
 
@@ -264,14 +267,31 @@
 
     <!-- Token distributed Amount -->
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="8dp">
+
+
+    <TextView
         android:id="@+id/tokensDistributedHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/token_amount"/>
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
 
         <EditText
             android:layout_gravity="center"
@@ -291,14 +311,32 @@
 
 
     <!-- Price Per Token -->
-    <TextView
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="8dp">
+
+    <TextView
         android:id="@+id/pricePerTokenHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price_per_token"/>
+
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <EditText
         android:layout_gravity="center"
@@ -369,19 +407,34 @@
             />
     <!-- Restrictions -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp">
+
     <!-- About Header -->
     <TextView
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/aboutHeader"
         android:text="@string/about"/>
     <!-- About Header -->
 
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
     <!-- About -->
     <EditText
-        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_edittext"
         android:id="@+id/about"
         android:gravity="start"
@@ -396,20 +449,33 @@
 
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp">
+
     <!-- Claim Instructions Header -->
     <TextView
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/claim_instructionsHeader"
         android:text="@string/claim_instructions"/>
     <!-- Claim Instructions Header -->
 
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+    </LinearLayout>
     <!-- Claim Instructions -->
     <EditText
-        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_edittext"
         android:id="@+id/claim_instructions"
         android:gravity="start"
@@ -445,6 +511,30 @@
         android:text="By clicking send I accept the Terms &amp; Conditions"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+    <CheckBox
+        android:id="@+id/contact_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#007cd4"
+        android:text="@string/contact_text"
+        />
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="*"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <Button
         android:layout_marginTop="16dp"
