@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity implements
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private List<Fragment> activeFragments = new ArrayList<>();
     private DrawerLayout drawer;
-    static String currentUserPhone;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -293,7 +291,7 @@ public class MainActivity extends AppCompatActivity implements
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
                     // user is already signed in
-                    currentUserPhone = user.getPhoneNumber();
+                    Log.d(TAG,"User is signed in");
                 }
                 else {
                     //user is signed out
@@ -304,7 +302,8 @@ public class MainActivity extends AppCompatActivity implements
                                     .setPrivacyPolicyUrl("https://superapp.example.com/privacy-policy.html")
                                     .setIsSmartLockEnabled(false)
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.PhoneBuilder().build())
+                                            new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                            new AuthUI.IdpConfig.EmailBuilder().build())
                                     )
                                     .build(),
                             RC_SIGN_IN);

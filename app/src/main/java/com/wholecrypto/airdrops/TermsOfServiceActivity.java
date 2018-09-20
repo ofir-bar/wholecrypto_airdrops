@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 public class TermsOfServiceActivity extends AppCompatActivity {
 
+    private static final String TAG = "TermsOfServiceActivity";
 
     // Remote Config keys
     private static final String TERMS_OF_SERVICE_KEY = "terms_of_service";
@@ -72,15 +74,13 @@ public class TermsOfServiceActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(TermsOfServiceActivity.this, "Fetch Succeeded",
-                                    Toast.LENGTH_SHORT).show();
-
+                            Log.e(TAG,"Fetch Succeed");
                             // After config data is successfully fetched, it must be activated before newly fetched
                             // values are returned.
                             mFirebaseRemoteConfig.activateFetched();
                         } else {
-                            Toast.makeText(TermsOfServiceActivity.this, "Fetch Failed",
-                                    Toast.LENGTH_SHORT).show();
+                            Log.e(TAG,"Fetch Failed");
+
                         }
                         displayTermsOfService();
                     }

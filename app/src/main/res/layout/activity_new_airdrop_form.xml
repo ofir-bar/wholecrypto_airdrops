@@ -156,7 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:ems="10"
-            android:inputType="textImeMultiLine"
+            android:inputType="textMultiLine"
             android:textColor="#000000"
             android:textColorHint="@color/subtext"/>
     <!-- Social Media URLs -->

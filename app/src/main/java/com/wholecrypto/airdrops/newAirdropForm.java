@@ -1,8 +1,12 @@
 package com.wholecrypto.airdrops;
 
+import android.app.AlertDialog;
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,8 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class newAirdropForm extends AppCompatActivity {
     private static final String TAG = "newAirdropForm";
-    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlSK6gQ3UUteF+LI3cOSoDaF9WfKTUPYn9vvzoaTaXBbYDjKENTqFv9bcjipjPcq7UuoPa4B13iLhqQbgGDUQhr4XrYa6vRcPP89qZL0jW2d1aLjylcjlge1aq7DFRKdB4BVWf3uPKCW+vf0gKG4Sss0wzYxkI6j0t0Zy5jlakrEHAmNAOAE3BzYtPBt4M/sUrIRh9zSiWmBELzvsR/fLmOfH+fdmyn1l6K8tD6r/kH/UKuyQdgbqlWUMyz0RkUKABs6ubHYq9v+pp+2kPT5DxmN7O30SwBf8mpB5UOIOyGGIz9ll7ezuXmsBQsGf5oRiWnfmiH9EjZI6jgT7PbexxwIDAQAB";
-
 
 
     //Widgets
@@ -51,7 +53,6 @@ public class newAirdropForm extends AppCompatActivity {
 
 
     //Variables
-    String sentByPhone = MainActivity.currentUserPhone;
     String contactEmail;
 
     String projectName;
@@ -153,6 +154,7 @@ public class newAirdropForm extends AppCompatActivity {
         submitAirdrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                createAirdrop();
             }
         });
 
@@ -217,12 +219,10 @@ public class newAirdropForm extends AppCompatActivity {
 
 
             //Create the airdrop object
-            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,allLinks,startDate,endDate,tokenSymbol,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,sentByPhone,false,claimInstructions);
+            Airdrop newAirdrop = new Airdrop(projectName,projectCategory,allLinks,startDate,endDate,tokenSymbol,tokenDistributed,pricePerToken,kycOrWhitelist,restrictions,about,false,contactEmail,false,claimInstructions);
 
             aAirdropsDatabaseReference.push().setValue(newAirdrop);//add a success listener
-            Toast toast = (Toast.makeText(this,"Form Sent Successfully",Toast.LENGTH_SHORT));
-            toast.show();
-
+            showAlertWithButton("Airdrop sent for inspection", "We will contact you by email for modifications and before your airdrop is published", "I understand");
 
             clearForm();
 
@@ -234,7 +234,7 @@ public class newAirdropForm extends AppCompatActivity {
 //Check logic for mandatory fields
     private boolean checkFormLogicIsValid() {
 
-/*
+
         //Check if blank, or contain any unrelevant stuff
 
         if (contactEmail.isEmpty()) {
@@ -285,7 +285,6 @@ public class newAirdropForm extends AppCompatActivity {
             return false;
         }
 
-*/
         return true;
     }
 
@@ -314,6 +313,12 @@ public class newAirdropForm extends AppCompatActivity {
         aboutRef.setText("");
         claimInstructionsRef.setText("");
         contactCheckboxRef.setChecked(false);
+    }
+
+
+
+    private void showAlertWithButton(@NonNull String title, @NonNull String message, @NonNull String buttonMessage) {
+        new AlertDialog.Builder(this).setTitle(title).setMessage(message).setCancelable(false).setPositiveButton(buttonMessage, null).create().show();
     }
 
 }
