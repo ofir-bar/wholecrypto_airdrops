@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.github.ybq.android.spinkit.style.WanderingCubes;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -59,10 +57,6 @@ public class ActiveListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
         airdropsRef = FirebaseDatabase.getInstance().getReference().child("airdrops");
 
-        //Load the Bottom Banner Ad
-        AdView mAdView = view.findViewById(R.id.ad_banner);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         return view;
     }
@@ -91,9 +85,17 @@ public class ActiveListFragment extends Fragment {
           /*add data in adapter one by one if isPassedInspection true*/
                     String itemKey = dataSnapshot.getKey();
                     Airdrop airdrop = dataSnapshot.getValue(Airdrop.class);
-
-                    if (airdrop.isApprovedAirdrop()) {
+                    Log.d(TAG,"ActiveListFragment: onChildAdded");
+                    if (airdrop.isApproved()) {
+                        Log.d(TAG,"ActiveListFragment: onChildAdded : airdrop.isAprroved = true");
                         adapter.addAirdropItem(itemKey, airdrop);
+                    }
+                    else if(!airdrop.isApproved()){
+                        Log.d(TAG,"Airdrop is not approved");
+                    }
+                    else{
+                        Log.d(TAG,"Airdrop is null");
+
                     }
                 }
 
@@ -102,7 +104,7 @@ public class ActiveListFragment extends Fragment {
               /*when something change in data then add in adapter if isPassedInspection true*/
                     String itemKey = dataSnapshot.getKey();
                     Airdrop airdrop = dataSnapshot.getValue(Airdrop.class);
-                    if (airdrop.isApprovedAirdrop()) {
+                    if (airdrop.isApproved()) {
                         adapter.addAirdropItem(itemKey, airdrop);
                     }
                 }

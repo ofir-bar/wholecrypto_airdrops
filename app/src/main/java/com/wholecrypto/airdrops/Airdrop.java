@@ -4,55 +4,43 @@ import android.support.annotation.Keep;
 @Keep
 public class Airdrop {
 
-    private String projectName;
-    private String projectCategory;
-    private String allLinksURL;
+    private String name;
+    private String links; // Add links to that
     private String startDate;
     private String endDate;
     private String tokenSymbol;
-    private String tokensDistribute;
-    private String pricePerToken;
-    private String kycOrWhitelist;
     private String restrictions;
-    private String about;
-    private boolean isPremium;
-    private String sentBy;
-    private boolean approvedAirdrop;
+    private String about; // Add links to that
+    private boolean approved;
     private String claimInstructions;
+    private String estimatedValue;
+    private String contactEmail;
 
+//Note:
+    //Class must have getters in order to work with firebase. without getter the field will not be shown in firebase db.
 
-
-    public Airdrop(String projectName, String projectCategory, String allLinksURL, String startDate, String endDate, String tokenSymbol, String tokensDistribute, String pricePerToken, String kycOrWhitelist, String restrictions, String about, boolean isPremium, String sentBy, boolean approvedAirdrop, String claimInstructions) {
-        this.projectName = projectName;
-        this.projectCategory = projectCategory;
-        this.allLinksURL = allLinksURL;
+    public Airdrop(String name, String links, String startDate, String endDate, String tokenSymbol, String restrictions, String about, String claimInstructions,String estimatedValue, String contactEmail) {
+        this.name = name;
+        this.links = links;
         this.startDate = startDate;
         this.endDate = endDate;
         this.tokenSymbol = tokenSymbol;
-        this.tokensDistribute = tokensDistribute;
-        this.pricePerToken = pricePerToken;
-        this.kycOrWhitelist = kycOrWhitelist;
         this.restrictions = restrictions;
         this.about = about;
-        this.isPremium = isPremium;
-        this.sentBy = sentBy;
-        this.approvedAirdrop = approvedAirdrop;
         this.claimInstructions = claimInstructions;
-
+        this.estimatedValue = estimatedValue;
+        this.contactEmail = contactEmail;
+        this.approved = false;
     }
 
-    public Airdrop(){}  //Required for firebase
+    public Airdrop(){}  //Required for Firebase
 
-    public String getProjectName() {
-        return projectName;
+    public String getName() {
+        return name;
     }
 
-    public String getProjectCategory() {
-        return projectCategory;
-    }
-
-    public String getAllLinksURL() {
-        return allLinksURL;
+    public String getLinks() {
+        return links;
     }
 
     public String getStartDate() {
@@ -67,18 +55,6 @@ public class Airdrop {
         return tokenSymbol;
     }
 
-    public String getTokensDistribute() {
-        return tokensDistribute;
-    }
-
-    public String getPricePerToken() {
-        return pricePerToken;
-    }
-
-    public String getKycOrWhitelist() {
-        return kycOrWhitelist;
-    }
-
     public String getRestrictions() {
         return restrictions;
     }
@@ -87,20 +63,19 @@ public class Airdrop {
         return about;
     }
 
-    public boolean isPremium() {
-        return isPremium;
+    public boolean isApproved() {
+        return approved;
     }
 
-    public String getSentBy() {
-        return sentBy;
+    public String getEstimatedValue() {
+        return estimatedValue;
     }
 
-    public boolean isApprovedAirdrop() {
-        return approvedAirdrop;
+    public String getContactEmail() {
+        return contactEmail;
     }
 
     public String getClaimInstructions() {
         return claimInstructions;
     }
-
 }

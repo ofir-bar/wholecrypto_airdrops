@@ -13,116 +13,65 @@
     card_view:cardCornerRadius="10dp"
     android:background="@color/colorAccent">
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
+        <TextView
+            android:id="@+id/project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/data_unavailable"
+            android:textColor="@color/text"
+            card_view:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="22dp" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:visibility="invisible"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.20999998"
-        card_view:srcCompat="@android:drawable/sym_def_app_icon"
-        />
+        <TextView
+            android:id="@+id/symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/data_unavailable"
+            android:textColor="@color/text"
+            card_view:layout_constraintStart_toEndOf="@+id/project_name"
+            card_view:layout_constraintTop_toTopOf="@+id/project_name" />
 
-    <TextView
-        android:textColor="@color/text"
-        android:id="@+id/project_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/data_unavailable"
-        card_view:layout_constraintStart_toEndOf="@+id/logo"
-        card_view:layout_constraintTop_toTopOf="@+id/logo" />
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_unavailable"
+            android:textColor="@color/subtext"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/project_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/project_name" />
 
-    <TextView
-        android:textColor="@color/text"
-        android:id="@+id/symbol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/data_unavailable"
-        card_view:layout_constraintStart_toEndOf="@+id/project_name"
-        card_view:layout_constraintTop_toTopOf="@+id/project_name" />
+        <ImageView
+            android:id="@+id/isRestricted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            card_view:layout_constraintStart_toEndOf="@+id/symbol"
+            card_view:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/about"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/data_unavailable"
-        android:textColor="@color/subtext"
-        card_view:layout_constraintBottom_toTopOf="@+id/time_end"
-        card_view:layout_constraintEnd_toEndOf="@+id/worth"
-        card_view:layout_constraintStart_toStartOf="@+id/project_name"
-        card_view:layout_constraintTop_toBottomOf="@+id/project_name" />
+        <ImageView
+            android:id="@+id/ic_estimated_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/about"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/isRestricted"
+            card_view:srcCompat="@drawable/ic_tag" />
 
-    <ImageView
-        android:id="@+id/isRestricted"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        card_view:layout_constraintStart_toEndOf="@+id/symbol"
-        card_view:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:textColor="@color/text"
-        android:id="@+id/end_in_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Ends in:"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <TextView
-        android:id="@+id/time_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/data_unavailable"
-        card_view:layout_constraintStart_toEndOf="@+id/end_in_text"
-        card_view:layout_constraintTop_toTopOf="@+id/end_in_text" />
-
-    <TextView
-        android:id="@+id/worth_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Est. Worth:"
-        android:textColor="@color/text"
-        card_view:layout_constraintEnd_toStartOf="@+id/worth"
-        card_view:layout_constraintTop_toTopOf="@+id/time_end" />
-
-    <TextView
-        android:id="@+id/worth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/data_unavailable"
-        android:textColor="#1db954"
-        card_view:layout_constraintEnd_toStartOf="@+id/dollar_sign"
-        card_view:layout_constraintTop_toTopOf="@+id/worth_text" />
-
-    <TextView
-        android:id="@+id/dollar_sign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="$"
-        android:textColor="#1db954"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintTop_toTopOf="@+id/worth" />
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 
 
 

@@ -44,27 +44,6 @@
         <!-- Project Name and Symbol -->
 
         <!-- Project Category -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/category_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="Category:"
-                />
-
-            <TextView
-                android:id="@+id/category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"/>
-        </LinearLayout>
         <!-- Project Category -->
 
 
@@ -177,51 +156,9 @@
         <!-- Ending day -->
 
         <!-- Tokens Distributed -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/token_distributed_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="Tokens Distributed:"
-                />
-
-            <TextView
-                android:id="@+id/token_distributed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"/>
-        </LinearLayout>
         <!-- Tokens Distributed -->
 
         <!-- Price per token in USD -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/token_worth_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="Token Estimated Worth"
-                />
-
-            <TextView
-                android:id="@+id/token_worth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"/>
-        </LinearLayout>
         <!-- Price per token in USD -->
 
 
@@ -231,6 +168,32 @@
             android:layout_height="2dp"
             android:background="?android:attr/listDivider"/>
         <!-- Divider -->
+
+
+        <!-- Estimated Value -->
+        <TextView
+            android:id="@+id/estimated_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/estimated_value"
+            />
+        <TextView
+            android:id="@+id/estimated_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"/>
+        <!-- Estimated Value -->
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"/>
+        <!-- Divider -->
+
 
         <!-- Social Media -->
             <TextView

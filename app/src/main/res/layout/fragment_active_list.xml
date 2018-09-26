@@ -24,7 +24,8 @@
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/ad_banner"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_10percent">
@@ -46,10 +47,6 @@
 
         </android.support.v7.widget.RecyclerView>
 
-        <!--
-        ca-app-pub-3940256099942544/6300978111 testing.
-        ca-app-pub-3677276785158147/6967202646 production
-    -->
 
     </FrameLayout>
 
@@ -60,16 +57,5 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/ad_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3677276785158147/6967202646"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

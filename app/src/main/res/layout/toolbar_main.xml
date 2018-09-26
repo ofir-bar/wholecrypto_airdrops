@@ -40,15 +40,6 @@
                 android:text="@string/main_toolbar_subtitle"
                 android:textSize="18sp"/>
 
-            <TextView
-                android:textColor="#ffffff"
-                android:id="@+id/main_toolbar_title_beta_tag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="@string/main_toolbar_beta_tag"
-                android:textSize="12sp" />
-
         </LinearLayout>
 
 

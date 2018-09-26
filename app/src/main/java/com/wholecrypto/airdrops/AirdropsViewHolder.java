@@ -1,7 +1,13 @@
 package com.wholecrypto.airdrops;
 
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AirdropsViewHolder extends RecyclerView.ViewHolder {
@@ -14,11 +20,15 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
         view=itemView;
     }
 
+    /**
+    Initialize cards in the active airdrops with airdrops
+     @param airdrop = a certain airdrop
+     */
     public void setAirdropData(Airdrop airdrop) {
 
         // initialise card views items and set value in them
         TextView projectName = view.findViewById(R.id.project_name);
-        projectName.setText(airdrop.getProjectName());
+        projectName.setText(airdrop.getName());
 
         TextView symbol = view.findViewById(R.id.symbol);
         symbol.setText(airdrop.getTokenSymbol());
@@ -26,19 +36,22 @@ public class AirdropsViewHolder extends RecyclerView.ViewHolder {
         TextView about = view.findViewById(R.id.about);
         about.setText(airdrop.getAbout());
 
-        TextView time_end = view.findViewById(R.id.time_end);
-        time_end.setText(airdrop.getEndDate());
+        final String estimatedValue = airdrop.getEstimatedValue();
 
-        //Calculate and set token worth
-        TextView tokenWorthText = view.findViewById(R.id.worth);
-        //Calculate the estimate worth of 1 Token
-        double tokenWorth = Double.valueOf(airdrop.getPricePerToken() ) * Double.valueOf(airdrop.getTokensDistribute());
+        ImageView estimatedValueTag = view.findViewById(R.id.ic_estimated_value);
 
-        tokenWorthText.setText(String.valueOf(tokenWorth));
+        estimatedValueTag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertWithButton("Airdrop Estimated Value",estimatedValue,"OK",view);
+            }
+        });
 
 
+    }
 
-
+    private void showAlertWithButton(@NonNull String title, @NonNull String message, @NonNull String buttonMessage,View view) {
+        new AlertDialog.Builder(view.getContext()).setTitle(title).setMessage(message).setCancelable(false).setPositiveButton(buttonMessage, null).create().show();
     }
 
 

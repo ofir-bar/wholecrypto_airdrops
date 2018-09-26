@@ -97,7 +97,7 @@
 
 
     <!-- Airdrop Registration Fragment -->
-    <string name="contact_email">Email for Contact - <b>We will contact you before your airdrop is published</b></string>
+    <string name="contact_email">Contact Email</string>
     <string name="is_premium">Premium Airdrop?</string>
     <string name="ico_name">Project Name:</string>
 
@@ -141,46 +141,10 @@
         3. Like us on facebook: www.facebook.com/ourproject
     </string>
 
-    <string-array name="project_category">
+    <string name="estimated_value">Estimated Airdrop Value</string>
+    <string name="estimated_value_hint">We will distribute 1M worth of ABC Token\nEach participant will get 15 (ABC) token worth 5$</string>
 
-        <item> Finance </item>
-        <item>Payments/Wallets</item>
-        <item>Commerce/Retail</item>
-        <item>Asset Management</item>
-        <item>Blockchain Platform</item>
-        <item>Data/Computing/AI</item>
-        <item>Gaming/AR/VR</item>
-        <item>Betting/Gambling</item>
-        <item>Media/Content</item>
-        <item>Prediction Market</item>
-        <item>Entertainment</item>
-        <item>IoT</item>
-        <item>Drugs/Health</item>
-        <item>Security/Identity</item>
-        <item>Funding/VC</item>
-        <item>Content/Advertising</item>
-        <item>Jobs/Marketplace</item>
-        <item>Real Estate</item>
-        <item>Network/Communications</item>
-        <item>Industry/Logistics</item>
-        <item>Social Network</item>
-        <item>Transportation</item>
-        <item>Energy/Utilities</item>
-        <item>Crypto Mining</item>
-        <item>Education</item>
-        <item>Insurance</item>
-        <item>Management Systems</item>
-        <item>Travel</item>
-        <item>Music/Arts</item>
-        <item>Sports</item>
 
-    </string-array>
-    <string-array name="kyc_or_whitelist">
-        <item>None</item>
-        <item>KYC and Whitelist</item>
-        <item>KYC only</item>
-        <item>Whitelist only</item>
-    </string-array>
 
     <string name="airdrop_starting_date">Starting Date</string>
     <string name="airdrop_ending_date">Ending Date</string>

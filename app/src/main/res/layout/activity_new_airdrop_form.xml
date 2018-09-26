@@ -23,7 +23,7 @@
         android:layout_marginStart="8dp">
 
 
-        <!-- contat email -->
+        <!-- contact email -->
         <TextView
 
             android:id="@+id/contact_email_header"
@@ -95,30 +95,6 @@
 
 
     <!-- Project Category -->
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@drawable/rounded_edittext">
-
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:id="@+id/projectCategoryHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/project_category"
-            android:textColor="#000000"/>
-
-        <Spinner
-            android:layout_marginStart="16dp"
-            android:id="@+id/projectCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
     <!-- Project Category -->
 
     <LinearLayout
@@ -265,125 +241,6 @@
     <!-- Token Symbol -->
 
 
-    <!-- Token distributed Amount -->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp">
-
-
-    <TextView
-        android:id="@+id/tokensDistributedHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/token_amount"/>
-
-        <TextView
-            android:textColor="#ff0000"
-            android:textSize="18sp"
-            android:text="*"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-    </LinearLayout>
-
-        <EditText
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edittext"
-            android:id="@+id/tokensDistributed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            android:textColor="#000000"
-            android:textColorHint="@color/subtext"
-            android:hint="@string/token_amount_hint"
-            />
-    <!-- Token distributed Amount -->
-
-
-
-
-    <!-- Price Per Token -->
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp">
-
-    <TextView
-        android:id="@+id/pricePerTokenHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/price_per_token"/>
-
-
-        <TextView
-            android:textColor="#ff0000"
-            android:textSize="18sp"
-            android:text="*"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-    <EditText
-        android:layout_gravity="center"
-        android:background="@drawable/rounded_edittext"
-        android:id="@+id/pricePerToken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textColor="#000000"
-        android:textColorHint="@color/subtext"
-        android:hint="@string/price_per_token_hint"
-        />
-    <!-- Price Per Token -->
-
-
-    <!-- KYC or Whitelist? -->
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/rounded_edittext">
-
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/kyc_or_whitelist"
-            android:id="@+id/kycOrWhitelistHeader"
-            android:textColor="#000000"
-            />
-
-        <Spinner
-            android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:id="@+id/kycOrWhitelist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            />
-
-    </LinearLayout>
-
-    <!-- KYC or Whitelist? -->
-
 
     <!-- Restrictions -->
         <TextView
@@ -489,14 +346,30 @@
     <!-- Claim Instructions -->
 
 
-    <!-- is Premium ?
-    <CheckBox
-        android:layout_marginTop="8dp"
-        android:id="@+id/premium"
+    <!-- Estimated Value Header -->
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/is_premium"/>
-     is Premium ? -->
+        android:id="@+id/estimated_value_header"
+        android:text="@string/estimated_value"/>
+    <!-- Estimated Value Header -->
+
+    <!-- Estimated Value -->
+    <EditText
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edittext"
+        android:id="@+id/estimated_value"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:hint="@string/estimated_value_hint"
+        android:textColorHint="@color/subtext"
+        />
+    <!-- Estimated Value -->
 
 
     <TextView
@@ -510,31 +383,6 @@
         android:gravity="center"
         android:text="By clicking send I accept the Terms &amp; Conditions"
         />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="24dp">
-
-    <CheckBox
-        android:id="@+id/contact_checkbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#007cd4"
-        android:text="@string/contact_text"
-        />
-
-        <TextView
-            android:textColor="#ff0000"
-            android:textSize="18sp"
-            android:text="*"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
 
     <Button
         android:layout_marginTop="16dp"

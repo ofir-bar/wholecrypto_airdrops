@@ -48,15 +48,13 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
 
 
                 //Gathers all details from the tapped airdrop and pass it to the airdrop-in detail activity
-                intent.putExtra(DetailedAirdropActivity.EXTRA_PROJECT_NAME_SYMBOL, airdrop.getProjectName());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_CATEGORY, airdrop.getProjectCategory());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_PROJECT_NAME_SYMBOL, airdrop.getName());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_RESTRICTIONS, airdrop.getRestrictions());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_ABOUT, airdrop.getAbout());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_STARTING_DATE, airdrop.getStartDate());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_ENDING_DATE, airdrop.getEndDate());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_TOKENS_DISTRIBUTED, airdrop.getTokensDistribute());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_PRICE_PER_TOKEN, airdrop.getPricePerToken());
-                intent.putExtra(DetailedAirdropActivity.EXTRA_ALL_LINKS_URL, airdrop.getAllLinksURL());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_ALL_LINKS_URL, airdrop.getLinks());
+                intent.putExtra(DetailedAirdropActivity.EXTRA_ESTIMATED_VALUE, airdrop.getEstimatedValue());
                 intent.putExtra(DetailedAirdropActivity.EXTRA_CLAIM_INSTRUCTIONS, airdrop.getClaimInstructions());
 
 
@@ -77,6 +75,7 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
 
 
     public void addAirdropItem(String key,Airdrop airdrop) {
+        Log.d(TAG,"AirdropsAdapter: addAirdropItem");
 
         if (!airdropsList.containsKey(key)) {
             //add to the airdropsList
@@ -88,18 +87,6 @@ public class AirdropsAdapter extends RecyclerView.Adapter<AirdropsViewHolder>{
             notifyItemInserted(airdropsList.size());
         }
 
-    }
-
-    public void clear(){
-        //clear if contain any values
-        if(!airdropsList.isEmpty()){
-            airdropsList.clear();
-            Log.e(TAG,"airdropsList cleared");
-        }
-        if(!keysList.isEmpty()){
-            keysList.clear();
-            Log.e(TAG,"keysList cleared");
-        }
     }
 
 }
