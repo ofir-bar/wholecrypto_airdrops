@@ -18,6 +18,15 @@ The app currently written in Java and uses the Gradle build system. </br>
 Firebase Real Time DB to store airdrops, and synchronize any changes to the db in real time.</br>
 Firebase authentication for user registration (gmail and regular email).</br>
 Firebase remote control for Terms & Service.</br>
+Airdrops are sent for manual inspection. Once passed admin authorization, the airdrop will appear to users in realtime.</br>
+
+# Screenshots
+
+<div align="center">
+    <img src="https://i.imgur.com/QFudc6o.png" width="250px"</img>
+    <img src="https://i.imgur.com/lT5wvl3.png" width="250px"</img>
+    <img src="https://i.imgur.com/mwj0mm9.png" width="250px"</img> 
+</div>
 
 
 # Download the app on Google Play
