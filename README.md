@@ -1,19 +1,43 @@
 # Airdrops by Wholecrypto Android App
 
-Airdrops by WholeCrpyoto is a native Android app.
+## :construction_worker: :hammer: :wrench: :nut_and_bolt: WORK IN PROGRESS :construction_worker: :hammer: :wrench: :nut_and_bolt: 
 
-This project is a part of the Airdrops by Wholecrpyto apps built for iOS, and the web.
+Airdrops by WholeCrpyoto is a native Android app written in Java.
+
+This project is a part of the Airdrops by Wholecrypto solutions built for iOS, and the web.
 
 
 # Features
-The app displays a list of cryptocurrency airdrops, allowing users to mark airdrops as done, save airdrops for later, notifiy users once a new airdrop is submitted, connect their wallet and social accounts, check airdrop TODO List assigments as done, and more.
+The app displays a list of cryptocurrency airdrops. Users can mark airdrops as done, save airdrops for "to-do" later, notifiy users once a new airdrop is submitted, connect their wallet and social accounts, and many more.
 
-Cryptocurrency Projects can submit their airdrop through the Android app, iOS app or the web.
+Cryptocurrency Owners can submit their airdrop through the Android app, iOS app or the web.
 
 
 # Development Environment
-The app currently written in Java and uses the Gradle build system.
+The app currently written in Java and uses the Gradle build system. </br>
+Firebase Real Time DB to store airdrops, and synchronize any changes to the db in real time.</br>
+Firebase authentication for user registration (gmail and regular email).</br>
+Firebase remote control for Terms & Service.</br>
+
 
 # Download the app on Google Play
 
-<a href='https://play.google.com/store/apps/details?id=com.wholecrypto.airdrops&rdid=com.wholecrypto.airdrops&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height = "125" width = "323" /></a>
+<a href='https://play.google.com/store/apps/details?id=com.wholecrypto.airdrops&rdid=com.wholecrypto.airdrops&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height = "63" width = "162" /></a>
+
+
+# License
+```
+Copyright 2018 Ofir Bar
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
