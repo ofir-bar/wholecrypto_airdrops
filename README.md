@@ -15,9 +15,10 @@ Example: I am creating a project called "OfirCoin", which has a token/coin named
 I decided to create an airdrop, limited to 100 users. For each user, I will distribute 50 OFC (equivalent to 5$) for every participant who likes my Facebook page, and join my Telegram channel.
 
 # Features
-The app displays a list of cryptocurrency airdrops. Users can mark airdrops as done, save airdrops for "to-do" later, notifiy users once a new airdrop is submitted, connect their wallet and social accounts, and many more.
+The app displays a list of cryptocurrency airdrops. Users browse airdrops, mark airdrops as done, save airdrops for "to-do" later & more. The app notifies users once a new airdrop is submitted (can be turned off).
+Future features include connecting their crypto wallet to sum how much money they earned, commenting on airdrops and flagging airdrops as scams.
 
-Cryptocurrency Owners can submit their airdrop through the Android app, iOS app or the web.
+Cryptocurrency Owners can submit their airdrop through the Android app, iOS app or the web, which will only be shown to users after admin approves it in the database.
 
 
 # Development Environment
@@ -25,7 +26,7 @@ The app currently written in Java and uses the Gradle build system. </br>
 Firebase Real Time DB to store airdrops, and synchronize any changes to the db in real time.</br>
 Firebase authentication for user registration (gmail and regular email).</br>
 Firebase remote control for Terms & Service.</br>
-Airdrops are sent for manual inspection. Once passed admin authorization, the airdrop will appear to users in realtime.</br>
+As backend and to save user specific data I use Google Cloud Functions with Typescript.
 
 # Screenshots
 
