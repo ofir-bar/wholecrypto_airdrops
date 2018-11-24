@@ -6,6 +6,13 @@ Airdrops by WholeCrpyoto is a native Android app written in Java.
 
 This project is a part of the Airdrops by Wholecrypto solutions built for iOS, and the web.
 
+# Abstract
+In terms of cryptocurrencies, airdrops are a way for cryptocurrency project owners to market themselfs. The tradeoff is simple:
+Project owners will give small amount of their coin/token they develop to users.
+In exchange, project owners may ask users for specific tasks.
+
+Example: I am creating a project called "OfirCoin", which has a token/coin named "OFC" .
+I decided to create an airdrop, limited to 100 users. For each user, I will distribute 50 OFC (equivalent to 5$) for every participant who likes my Facebook page, and join my Telegram channel.
 
 # Features
 The app displays a list of cryptocurrency airdrops. Users can mark airdrops as done, save airdrops for "to-do" later, notifiy users once a new airdrop is submitted, connect their wallet and social accounts, and many more.
