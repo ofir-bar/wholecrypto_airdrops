@@ -1,10 +1,6 @@
 # Airdrops by Wholecrypto Android App
 
-## :construction_worker: :hammer: :wrench: :nut_and_bolt: WORK IN PROGRESS :construction_worker: :hammer: :wrench: :nut_and_bolt: 
-
 Airdrops by WholeCrpyoto is a native Android app written in Java.
-
-This project is a part of the Airdrops by Wholecrypto solutions built for iOS, and the web.
 
 # Abstract
 In terms of cryptocurrencies, airdrops are a way for cryptocurrency project owners to market themselfs. The tradeoff is simple:
